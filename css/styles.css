@@ -249,6 +249,8 @@ main {
    Tarjetas de mods
    ============================================ */
 .mod-card {
+  display: flex;
+  flex-direction: column;
   background: var(--bg-paper);
   border: 2px solid var(--secondary);
   border-radius: var(--pico-border-radius);
@@ -273,6 +275,9 @@ main {
 }
 
 .mod-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: var(--space-md);
 }
 
@@ -283,6 +288,7 @@ main {
 }
 
 .mod-card p {
+  flex: 1;
   color: var(--text-dark);
   margin-bottom: var(--space-md);
   font-size: 0.95rem;
@@ -308,6 +314,7 @@ main {
 .mods-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
   gap: var(--space-xl);
   margin-top: var(--space-xl);
 }
