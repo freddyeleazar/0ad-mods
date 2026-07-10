@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
-  <rect fill="#1a1a1a" width="256" height="256" rx="16"/>
-  <text fill="#ff4444" font-family="Arial" font-size="48" x="128" y="120" text-anchor="middle">!</text>
-  <text fill="#b0b0b0" font-family="Arial" font-size="16" x="128" y="160" text-anchor="middle">Screenshot</text>
-  <text fill="#b0b0b0" font-family="Arial" font-size="16" x="128" y="180" text-anchor="middle">Not Available</text>
-</svg>

@@ -51,21 +51,21 @@
                     <p class="mb-3"><em>"Un tiempo que pasa, un mundo que vive"</em></p>
                     
                     <div class="compatibility-info mb-4">
-                        <span class="compatibility-badge">Versión 0.1.0</span>
+                        <span class="compatibility-badge">Versión 0.2.0</span>
                         <span class="compatibility-badge">Compatible con 0 A.D. 0.28.0</span>
                         <span class="compatibility-badge">Español / English</span>
                     </div>
                     
-                    <p class="mb-4">Añade un reloj virtual al HUD que muestra la hora del juego (HH:MM) con su fase correspondiente: DIA, NOCHE, AMANECER o ATARDECER. Además, aplica un tinte de color sobre toda la pantalla que cambia según la hora — azul oscuro de noche, amanecer cálido, día brillante y atardecer naranja.</p>
+                    <p class="mb-4">Muestra un reloj digital en el HUD con la hora virtual en formato 24h (HH:MM hrs) sincronizado con el ciclo día/noche del juego. Además, aplica un tinte de color dinámico a toda la pantalla que cambia según la hora — azul oscuro de noche, amanecer cálido, día brillante y atardecer naranja.</p>
                 </div>
             </div>
 
             <!-- Descripción ampliada -->
             <section class="mb-5">
                 <h2>📝 Descripción Detallada</h2>
-                <p>El mod Day/Night Cycle añade un indicador visual completo del ciclo día/noche en 0 A.D. Consta de dos elementos principales:</p>
+                <p>El mod Day/Night Cycle añade dos elementos visuales al HUD de 0 A.D.:</p>
                 
-                <p><strong>1. Reloj virtual en el HUD:</strong> Muestra la hora actual del juego en formato HH:MM junto con la fase del día (DIA, NOCHE, AMANECER, ATARDECER). Un ciclo completo dura 1440 segundos de simulación, equivalente a 24 horas de juego a velocidad 1x. El ciclo comienza a las 8:00 (8 AM).</p>
+                <p><strong>1. Reloj digital en el HUD:</strong> Muestra la hora actual del juego en formato HH:MM con el sufijo "hrs" (ej: "08:08 hrs"). Un ciclo completo dura 1440 segundos de simulación, equivalente a 24 horas de juego a velocidad 1x. El ciclo comienza a las 8:00 (8 AM).</p>
                 
                 <p><strong>2. Tinte de color a pantalla completa:</strong> Aplica un overlay de color sobre toda la pantalla que cambia suavemente según la hora virtual. De noche la pantalla se tiñe de azul oscuro, al amanecer de marrón cálido, durante el día es casi transparente y al atardecer se vuelve naranja.</p>
             </section>
@@ -74,11 +74,12 @@
             <section class="mod-features mb-5">
                 <h3>✨ Características Principales</h3>
                 <ul>
-                    <li><strong>Reloj en el HUD:</strong> Muestra la hora virtual en formato HH:MM con la fase actual</li>
-                    <li><strong>4 fases del día:</strong> NOCHE (0:00-6:00 y 20:00-24:00), AMANECER (6:00-8:00), DIA (8:00-18:00), ATARDECER (18:00-20:00)</li>
-                    <li><strong>Tinte de color dinámico:</strong> La pantalla se tiñe según la hora (azul de noche, naranja al atardecer)</li>
+                    <li><strong>Reloj en el HUD:</strong> Muestra la hora virtual en formato 24h (HH:MM hrs)</li>
+                    <li><strong>Tinte de color dinámico:</strong> La pantalla se tiñe según la hora (azul de noche, naranja al atardecer) con interpolación suave entre 10 keyframes de color</li>
                     <li><strong>Ciclo de 24 minutos:</strong> Un día completo dura 1440 segundos a velocidad 1x</li>
-                    <li><strong>Se puede activar/desactivar:</strong> Usa el hotkey <code>daynightcycle.toggle</code></li>
+                    <li><strong>Comienza a las 8:00:</strong> El ciclo empieza simulando las 8 AM</li>
+                    <li><strong>Se puede activar/desactivar:</strong> Hotkey <code>Alt+N</code> configurado por defecto</li>
+                    <li><strong>Config persistente:</strong> El estado se guarda en <code>gui.session.daynightcycle</code></li>
                     <li><strong>Sin afectar el rendimiento:</strong> El overlay es ligero y no interfiere con el juego</li>
                 </ul>
             </section>
@@ -88,8 +89,9 @@
                 <h3>🎯 ¿Qué Esperar de Este Mod?</h3>
                 <p>Con este mod podrás:</p>
                 <ul>
-                    <li>Saber exactamente qué hora es en el juego sin adivinar</li>
+                    <li>Saber exactamente qué hora es en el juego con solo mirar el HUD</li>
                     <li>Disfrutar de transiciones visuales suaves entre día y noche</li>
+                    <li>Activar o desactivar el reloj y el tinte con <kbd>Alt+N</kbd></li>
                     <li>Vivir una experiencia más inmersiva con la atmósfera visual del ciclo</li>
                 </ul>
                 <p><strong>Nota:</strong> El mod es puramente visual. No afecta la mecánica de juego, las estadísticas de las unidades ni la eficiencia de ninguna acción.</p>
@@ -98,21 +100,21 @@
             <!-- Dónde encontrarlo en el juego -->
             <section class="game-info mb-5">
                 <h3>🔍 ¿Dónde Encontrarlo en el Juego?</h3>
-                <p><strong>Reloj:</strong> Se muestra como un contador en la barra de sesión del HUD, junto a otros indicadores del juego.</p>
-                <p><strong>Tinte de color:</strong> Se aplica como un overlay que cubre toda la pantalla (superpuesto al juego).</p>
-                <p><strong>Activar/desactivar:</strong> El mod registra el hotkey <code>daynightcycle.toggle</code>. Puedes asignarle una tecla en Opciones → Configuración de Teclas de 0 A.D. También puedes configurar <code>gui.session.daynightcycle</code> en la consola.</p>
+                <p><strong>Reloj:</strong> Se muestra en la barra de sesión del HUD con el formato "08:08 hrs".</p>
+                <p><strong>Tinte de color:</strong> Se aplica como un overlay que cubre toda la pantalla (superpuesto al juego, no intercepta clics).</p>
+                <p><strong>Activar/desactivar:</strong> Presiona <kbd>Alt+N</kbd> para mostrar u ocultar el reloj y el tinte.</p>
             </section>
 
             <!-- Compatibilidad -->
             <section class="mb-5">
                 <h3>⚙️ Información de Compatibilidad</h3>
                 <div class="compatibility-info">
-                    <span class="compatibility-badge">Versión del mod: 0.1.0</span>
+                    <span class="compatibility-badge">Versión del mod: 0.2.0</span>
                     <span class="compatibility-badge">Versión de 0 A.D.: 0.28.0</span>
                     <span class="compatibility-badge">Idioma: Español / English</span>
                     <span class="compatibility-badge">Plataforma: Windows, Linux, Mac</span>
                 </div>
-                <p class="mt-3"><strong>Nota:</strong> Los textos de las fases (DAY, NIGHT, DAWN, DUSK) usan el sistema de localización de 0 A.D. El idioma se cambia desde las opciones del juego.</p>
+                <p class="mt-3"><strong>Nota:</strong> El texto "hrs" está integrado directamente en el código (en inglés). El mod es requisito para <strong>Calendar System</strong>.</p>
             </section>
 
             <!-- Instrucciones de instalación -->
@@ -139,7 +141,7 @@
             <section class="mb-5">
                 <h3>👥 Créditos</h3>
                 <p><strong>Autor:</strong> freddyeleazar</p>
-                <p><strong>Versión:</strong> 0.1.0</p>
+                <p><strong>Versión:</strong> 0.2.0</p>
                 <p><strong>Licencia:</strong> GPL v2 (como 0 A.D.)</p>
             </section>
 

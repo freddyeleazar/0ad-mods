@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 635" width="1200" height="635">
+  <rect width="1200" height="635" fill="#5D4E37"/>
+  <rect x="30" y="30" width="1140" height="575" rx="16" fill="#FDF8F0" stroke="#C9A227" stroke-width="4"/>
+  <text x="600" y="160" text-anchor="middle" font-family="serif" font-size="52" font-weight="bold" fill="#2C1810">Calendar System</text>
+  <line x1="200" y1="200" x2="1000" y2="200" stroke="#C9A227" stroke-width="3"/>
+  <text x="600" y="270" text-anchor="middle" font-family="monospace" font-size="32" fill="#5D4E37">Day 15, March, 500 BC</text>
+  <text x="600" y="330" text-anchor="middle" font-family="monospace" font-size="24" fill="#8B7500">📅 January &bull; February &bull; March</text>
+  <text x="600" y="380" text-anchor="middle" font-family="monospace" font-size="24" fill="#8B7500">April &bull; May &bull; June &bull; July</text>
+  <text x="600" y="430" text-anchor="middle" font-family="monospace" font-size="24" fill="#8B7500">August &bull; September &bull; October</text>
+  <text x="600" y="480" text-anchor="middle" font-family="monospace" font-size="24" fill="#8B7500">November &bull; December</text>
+  <rect x="400" y="520" width="400" height="50" rx="8" fill="#5D4E37"/>
+  <text x="600" y="553" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#FDF8F0">Requiere Day/Night Cycle</text>
+</svg>
