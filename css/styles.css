@@ -1,25 +1,67 @@
 /* Estilos personalizados para el sitio de Mods 0 A.D. */
 /* Temática: Antigüedad/Edad Media inspirada en 0 A.D. */
+/* Sobreescribe variables de Pico.CSS para mantener coherencia */
 
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
+/* ============================================
+   Sobreescribir variables de Pico.CSS
+   ============================================ */
 :root {
-  /* Paleta temática 0 A.D. */
-  --primary: #C9A227;           /* Dorado antiguo */
-  --primary-dark: #8B7500;      /* Dorado oscuro */
-  --secondary: #5D4E37;         /* Marrón madera */
-  --secondary-dark: #3E3225;    /* Marrón oscuro */
-  --accent: #2E8B57;            /* Verde bosque */
-  --accent-dark: #1E5631;       /* Verde oscuro */
-  --bg-warm: #F5F0E6;           /* Fondo cálido claro */
-  --bg-paper: #FDF8F0;          /* Fondo tipo papel antiguo */
-  --text-dark: #2C1810;         /* Texto oscuro */
-  --text-light: #8B7355;        /* Texto claro */
-  
+  /* Pico.CSS - Colores principales */
+  --pico-primary: #C9A227;
+  --pico-primary-hover: #8B7500;
+  --pico-primary-focus: rgba(201, 162, 39, 0.25);
+  --pico-primary-inverse: #fff;
+
+  --pico-secondary: #5D4E37;
+  --pico-secondary-hover: #3E3225;
+  --pico-secondary-focus: rgba(93, 78, 55, 0.25);
+  --pico-secondary-inverse: #fff;
+
+  --pico-contrast: #2E8B57;
+  --pico-contrast-hover: #1E5631;
+  --pico-contrast-focus: rgba(46, 139, 87, 0.25);
+  --pico-contrast-inverse: #fff;
+
+  /* Pico.CSS - Fondos */
+  --pico-background-color: #F5F0E6;
+  --pico-card-background-color: #FDF8F0;
+  --pico-card-sectioning-background-color: rgba(0, 0, 0, 0.03);
+
+  /* Pico.CSS - Texto */
+  --pico-color: #2C1810;
+  --pico-muted-color: #5D4E37;
+  --pico-muted-border-color: #C9A227;
+
+  /* Pico.CSS - Enlaces */
+  --pico-link-color: #1E5631;
+  --pico-link-hover-color: #C9A227;
+
+  /* Pico.CSS - Formularios */
+  --pico-form-element-background-color: #FDF8F0;
+  --pico-form-element-border-color: #5D4E37;
+  --pico-form-element-color: #2C1810;
+
+  /* Pico.CSS - Bordes y radios */
+  --pico-border-radius: 8px;
+
+  /* Nuestras variables personalizadas */
+  --primary: #C9A227;
+  --primary-dark: #8B7500;
+  --secondary: #5D4E37;
+  --secondary-dark: #3E3225;
+  --accent: #2E8B57;
+  --accent-dark: #1E5631;
+  --bg-warm: #F5F0E6;
+  --bg-paper: #FDF8F0;
+  --text-dark: #2C1810;
+  --text-light: #5D4E37;
+
   /* Tipografía */
   --font-heading: 'MedievalSharp', cursive;
   --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  
+
   /* Espaciado */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
@@ -27,23 +69,16 @@
   --space-lg: 1.5rem;
   --space-xl: 2rem;
   --space-xxl: 3rem;
-  
-  /* Bordes */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  
+
   /* Sombras */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Reset y estilos base */
-* {
-  box-sizing: border-box;
-}
-
+/* ============================================
+   Estilos base
+   ============================================ */
 body {
   font-family: var(--font-body);
   color: var(--text-dark);
@@ -53,21 +88,25 @@ body {
   padding: 0;
 }
 
-/* Tipografía */
+/* ============================================
+   Tipografía
+   ============================================ */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  color: var(--primary-dark);
+  color: var(--secondary-dark);
   margin-top: 0;
   margin-bottom: var(--space-md);
 }
 
 h1 {
   font-size: 2.5rem;
+  color: var(--primary-dark);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
   font-size: 2rem;
+  color: var(--primary-dark);
   border-bottom: 2px solid var(--primary);
   padding-bottom: var(--space-sm);
 }
@@ -77,7 +116,9 @@ h3 {
   color: var(--secondary-dark);
 }
 
-/* Enlaces */
+/* ============================================
+   Enlaces
+   ============================================ */
 a {
   color: var(--accent-dark);
   text-decoration: none;
@@ -85,40 +126,126 @@ a {
 }
 
 a:hover {
-  color: var(--primary);
+  color: var(--primary-dark);
   text-decoration: underline;
 }
 
-/* Botones */
+/* ============================================
+   Botones
+   ============================================ */
 button, [role="button"], .button {
   background-color: var(--primary);
-  color: white;
+  color: #fff;
   border: none;
   padding: var(--space-sm) var(--space-md);
-  border-radius: var(--radius-md);
+  border-radius: var(--pico-border-radius);
   font-family: var(--font-body);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   display: inline-block;
   text-align: center;
+  text-decoration: none;
 }
 
 button:hover, [role="button"]:hover, .button:hover {
   background-color: var(--primary-dark);
+  color: #fff;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+  text-decoration: none;
 }
 
 button:active, [role="button"]:active, .button:active {
   transform: translateY(0);
 }
 
-/* Tarjetas de mods */
+/* ============================================
+   Cabecera y navegación
+   ============================================ */
+header {
+  background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary) 100%);
+  color: #fff;
+  padding: var(--space-md) 0;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--space-md);
+  margin: 0;
+  padding: 0;
+}
+
+header nav a {
+  color: #fff;
+  font-weight: 500;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--pico-border-radius);
+  transition: background-color 0.2s ease-in-out;
+}
+
+header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ============================================
+   Contenido principal
+   ============================================ */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
+/* ============================================
+   Sección hero
+   ============================================ */
+#hero {
+  text-align: center;
+  padding: var(--space-xxl) var(--space-md);
+  background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--accent-dark) 100%);
+  color: #fff;
+  border-radius: var(--pico-border-radius);
+  margin-bottom: var(--space-xxl);
+}
+
+#hero h1 {
+  color: var(--primary);
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+/* ============================================
+   Tarjetas de mods
+   ============================================ */
 .mod-card {
   background: var(--bg-paper);
   border: 2px solid var(--secondary);
-  border-radius: var(--radius-lg);
+  border-radius: var(--pico-border-radius);
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   box-shadow: var(--shadow-sm);
@@ -135,6 +262,8 @@ button:active, [role="button"]:active, .button:active {
   height: 200px;
   object-fit: cover;
   border-bottom: 2px solid var(--secondary);
+  display: block;
+  background-color: var(--secondary);
 }
 
 .mod-card-content {
@@ -167,77 +296,9 @@ button:active, [role="button"]:active, .button:active {
   font-size: 0.85rem;
 }
 
-/* Cabecera y navegación */
-header {
-  background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary) 100%);
-  color: white;
-  padding: var(--space-md) 0;
-  box-shadow: var(--shadow-md);
-}
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--space-md);
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: var(--space-md);
-  margin: 0;
-  padding: 0;
-}
-
-header nav a {
-  color: white;
-  font-weight: 500;
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--radius-sm);
-  transition: background-color 0.2s ease-in-out;
-}
-
-header nav a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  text-decoration: none;
-}
-
-/* Contenido principal */
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: var(--space-xl) var(--space-md);
-}
-
-/* Sección hero */
-#hero {
-  text-align: center;
-  padding: var(--space-xxl) 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-              linear-gradient(135deg, var(--secondary-dark) 0%, var(--accent-dark) 100%);
-  color: white;
-  border-radius: var(--radius-lg);
-  margin-bottom: var(--space-xxl);
-}
-
-#hero h1 {
-  color: var(--primary);
-  font-size: 3rem;
-  margin-bottom: var(--space-md);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#hero p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto;
-  opacity: 0.9;
-}
-
-/* Grid de mods */
+/* ============================================
+   Grid de mods
+   ============================================ */
 .mods-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -245,10 +306,12 @@ main {
   margin-top: var(--space-xl);
 }
 
-/* Pie de página */
+/* ============================================
+   Pie de página
+   ============================================ */
 footer {
   background: var(--secondary-dark);
-  color: white;
+  color: #fff;
   text-align: center;
   padding: var(--space-lg) 0;
   margin-top: var(--space-xxl);
@@ -256,17 +319,19 @@ footer {
 
 footer p {
   margin: 0;
-  opacity: 0.9;
+  color: #fff;
 }
 
 footer strong {
   color: var(--primary);
 }
 
-/* Páginas de mods detalladas */
+/* ============================================
+   Páginas de mods detalladas
+   ============================================ */
 .mod-detail {
   background: var(--bg-paper);
-  border-radius: var(--radius-lg);
+  border-radius: var(--pico-border-radius);
   padding: var(--space-xl);
   margin-bottom: var(--space-xl);
   box-shadow: var(--shadow-md);
@@ -286,7 +351,7 @@ footer strong {
 
 .mod-detail-image img {
   width: 100%;
-  border-radius: var(--radius-md);
+  border-radius: var(--pico-border-radius);
   border: 2px solid var(--secondary);
 }
 
@@ -302,7 +367,7 @@ footer strong {
 
 .mod-features {
   background: rgba(0, 0, 0, 0.03);
-  border-radius: var(--radius-md);
+  border-radius: var(--pico-border-radius);
   padding: var(--space-md);
   margin: var(--space-md) 0;
 }
@@ -319,15 +384,18 @@ footer strong {
 
 .mod-features li {
   margin-bottom: var(--space-sm);
+  color: var(--text-dark);
 }
 
-/* Instrucciones de instalación */
+/* ============================================
+   Instrucciones de instalación
+   ============================================ */
 .installation-steps {
   background: var(--bg-warm);
   border-left: 4px solid var(--accent);
   padding: var(--space-md);
   margin: var(--space-md) 0;
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  border-radius: 0 var(--pico-border-radius) var(--pico-border-radius) 0;
 }
 
 .installation-steps h4 {
@@ -342,9 +410,12 @@ footer strong {
 
 .installation-steps li {
   margin-bottom: var(--space-sm);
+  color: var(--text-dark);
 }
 
-/* Compatibilidad */
+/* ============================================
+   Compatibilidad
+   ============================================ */
 .compatibility-info {
   display: flex;
   gap: var(--space-md);
@@ -354,22 +425,24 @@ footer strong {
 
 .compatibility-badge {
   background: var(--primary);
-  color: white;
+  color: #fff;
   padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--radius-sm);
+  border-radius: var(--pico-border-radius);
   font-size: 0.9rem;
   font-weight: 500;
 }
 
-/* Botón de descarga */
+/* ============================================
+   Botón de descarga
+   ============================================ */
 .download-button {
   display: inline-flex;
   align-items: center;
   gap: var(--space-sm);
   background: var(--accent);
-  color: white;
+  color: #fff;
   padding: var(--space-md) var(--space-lg);
-  border-radius: var(--radius-md);
+  border-radius: var(--pico-border-radius);
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -377,42 +450,41 @@ footer strong {
 
 .download-button:hover {
   background: var(--accent-dark);
+  color: #fff;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
   text-decoration: none;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-  }
-  
-  #hero h1 {
-    font-size: 2rem;
-  }
-  
-  .mod-detail-header {
-    flex-direction: column;
-  }
-  
-  .mod-detail-image, .mod-detail-info {
-    min-width: 100%;
-  }
-  
-  .mods-grid {
-    grid-template-columns: 1fr;
-  }
+/* ============================================
+   Info del juego
+   ============================================ */
+.game-info {
+  background: rgba(201, 162, 39, 0.1);
+  border: 1px solid var(--primary);
+  border-radius: var(--pico-border-radius);
+  padding: var(--space-md);
+  margin: var(--space-md) 0;
 }
 
-/* Utilidades */
-.text-center {
-  text-align: center;
+.game-info h4 {
+  color: var(--primary-dark);
+  margin-top: 0;
 }
+
+.game-info p {
+  color: var(--text-dark);
+  margin-bottom: var(--space-sm);
+}
+
+.game-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   Utilidades
+   ============================================ */
+.text-center { text-align: center; }
 
 .mt-1 { margin-top: var(--space-xs); }
 .mt-2 { margin-top: var(--space-sm); }
@@ -426,65 +498,44 @@ footer strong {
 .mb-4 { margin-bottom: var(--space-lg); }
 .mb-5 { margin-bottom: var(--space-xl); }
 
-/* Estilos para el contenido del juego */
-.game-info {
-  background: rgba(201, 162, 39, 0.1);
-  border: 1px solid var(--primary);
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
-  margin: var(--space-md) 0;
-}
-
-.game-info h4 {
-  color: var(--primary-dark);
-  margin-top: 0;
-}
-
-/* Iconos y elementos visuales */
-.icon {
-  display: inline-block;
-  width: 1.2em;
-  height: 1.2em;
-  vertical-align: middle;
-  margin-right: var(--space-xs);
-}
-
-/* Animaciones sutiles */
+/* ============================================
+   Animaciones
+   ============================================ */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .fade-in {
   animation: fadeIn 0.5s ease-out;
 }
 
-/* Estados de enfoque para accesibilidad */
+/* ============================================
+   Accesibilidad
+   ============================================ */
 a:focus, button:focus {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
-/* Impresión */
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  #hero h1 { font-size: 2rem; }
+  .mod-detail-header { flex-direction: column; }
+  .mod-detail-image, .mod-detail-info { min-width: 100%; }
+  .mods-grid { grid-template-columns: 1fr; }
+  .mod-card-footer { flex-direction: column; gap: var(--space-sm); text-align: center; }
+}
+
+/* ============================================
+   Impresión
+   ============================================ */
 @media print {
-  header, footer, .download-button {
-    display: none;
-  }
-  
-  body {
-    background: white;
-    color: black;
-  }
-  
-  .mod-card {
-    break-inside: avoid;
-    box-shadow: none;
-    border: 1px solid #ccc;
-  }
+  header, footer, .download-button { display: none; }
+  body { background: white; color: black; }
+  .mod-card { break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
 }
