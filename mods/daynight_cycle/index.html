@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Day/Night Cycle - Mod para 0 A.D. que añade un reloj de ciclo día/noche al HUD. Creado por freddyeleazar.">
+    <meta name="description" content="Day/Night Cycle - Mod para 0 A.D. que añade un reloj virtual y tinte de color según la hora del día. Creado por freddyeleazar.">
     <meta name="keywords" content="0 A.D., mod, daynight cycle, ciclo día noche, freddyeleazar">
     <meta name="author" content="freddyeleazar">
     
@@ -48,10 +48,10 @@
                     <div class="compatibility-info mb-4">
                         <span class="compatibility-badge">Versión 0.1.0</span>
                         <span class="compatibility-badge">Compatible con 0 A.D. 0.28.0</span>
-                        <span class="compatibility-badge">Español</span>
+                        <span class="compatibility-badge">Español (hardcoded)</span>
                     </div>
                     
-                    <p class="mb-4">Este mod añade un reloj de ciclo día/noche al HUD (la barra de herramientas del juego) que muestra la fase actual del día y el tiempo virtual. ¡Ahora podrás ver cómo pasa el tiempo en tu aldea!</p>
+                    <p class="mb-4">Añade un reloj virtual al HUD que muestra la hora del juego (HH:MM) con su fase correspondiente: DIA, NOCHE, AMANECER o ATARDECER. Además, aplica un tinte de color sobre toda la pantalla que cambia según la hora — azul oscuro de noche, amanecer cálido, día brillante y atardecer naranja.</p>
                     
                     <a href="https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/daynight_cycle.zip" class="download-button">
                         ⬇️ Descargar Mod
@@ -62,21 +62,23 @@
             <!-- Descripción ampliada -->
             <section class="mb-5">
                 <h2>📝 Descripción Detallada</h2>
-                <p>El mod Day/Night Cycle transforma tu experiencia en 0 A.D. al añadir un indicador visual del tiempo que pasa en el juego. Este reloj no solo es decorativo, sino que te ayuda a planificar tus estrategias según la hora del día.</p>
+                <p>El mod Day/Night Cycle añade un indicador visual completo del ciclo día/noche en 0 A.D. Consta de dos elementos principales:</p>
                 
-                <p>En 0 A.D., el ciclo día/noche ya existe en el juego, pero no hay una forma clara de ver qué hora es. Con este mod, siempre sabrás si es de día, de noche, o si está amaneciendo u anocheciendo.</p>
+                <p><strong>1. Reloj virtual en el HUD:</strong> Muestra la hora actual del juego en formato HH:MM junto con la fase del día (DIA, NOCHE, AMANECER, ATARDECER). Un ciclo completo dura 1440 segundos de simulación, equivalente a 24 horas de juego a velocidad 1x. El ciclo comienza a las 8:00 (8 AM).</p>
+                
+                <p><strong>2. Tinte de color a pantalla completa:</strong> Aplica un overlay de color sobre toda la pantalla que cambia suavemente según la hora virtual. De noche la pantalla se tiñe de azul oscuro, al amanecer de marrón cálido, durante el día es casi transparente y al atardecer se vuelve naranja.</p>
             </section>
 
             <!-- Características detalladas -->
             <section class="mod-features mb-5">
                 <h3>✨ Características Principales</h3>
                 <ul>
-                    <li><strong>Reloj en tiempo real:</strong> Muestra la hora actual del juego de forma continua</li>
-                    <li><strong>Fases del día:</strong> Indica si es amanecer, día, atardecer o noche</li>
-                    <li><strong>Tiempo virtual:</strong> Muestra cuánto tiempo ha pasado en el juego</li>
-                    <li><strong>Diseño discreto:</strong> Se integra perfectamente con la interfaz del juego</li>
-                    <li><strong>Fácil de leer:</strong> Números grandes y claros para que todos puedan verlo</li>
-                    <li><strong>Sin interferir:</strong> No afecta el rendimiento ni el juego</li>
+                    <li><strong>Reloj en el HUD:</strong> Muestra la hora virtual en formato HH:MM con la fase actual</li>
+                    <li><strong>4 fases del día:</strong> NOCHE (0:00-6:00 y 20:00-24:00), AMANECER (6:00-8:00), DIA (8:00-18:00), ATARDECER (18:00-20:00)</li>
+                    <li><strong>Tinte de color dinámico:</strong> La pantalla se tiñe según la hora (azul de noche, naranja al atardecer)</li>
+                    <li><strong>Ciclo de 24 minutos:</strong> Un día completo dura 1440 segundos a velocidad 1x</li>
+                    <li><strong>Se puede activar/desactivar:</strong> Usa el hotkey <code>daynightcycle.toggle</code></li>
+                    <li><strong>Sin afectar el rendimiento:</strong> El overlay es ligero y no interfiere con el juego</li>
                 </ul>
             </section>
 
@@ -85,19 +87,20 @@
                 <h3>🎯 ¿Qué Esperar de Este Mod?</h3>
                 <p>Con este mod podrás:</p>
                 <ul>
-                    <li>Planificar mejor tus ataques según la hora del día</li>
-                    <li>Saber cuándo tus unidades descansarán (en la noche)</li>
-                    <li>Disfrutar de la atmósfera del juego con una mejor percepción del tiempo</li>
-                    <li>Aprender sobre los ciclos día/noche en la antigüedad</li>
-                    <li>Tener una experiencia más inmersiva en el juego</li>
+                    <li>Saber exactamente qué hora es en el juego sin adivinar</li>
+                    <li>Disfrutar de transiciones visuales suaves entre día y noche</li>
+                    <li>Planificar mejor tus acciones según la hora (algunas unidades son más eficientes de día)</li>
+                    <li>Vivir una experiencia más inmersiva con la atmósfera visual del ciclo</li>
+                    <li>Activar o desactivar el efecto en cualquier momento con el hotkey</li>
                 </ul>
             </section>
 
             <!-- Dónde encontrarlo en el juego -->
             <section class="game-info mb-5">
                 <h3>🔍 ¿Dónde Encontrarlo en el Juego?</h3>
-                <p>Una vez instalado y activado, el reloj aparecerá automáticamente en la esquina superior derecha de tu pantalla, dentro del HUD (la barra de herramientas del juego).</p>
-                <p>No necesitas hacer nada más. Simplemente juega como siempre y verás el tiempo pasar en el reloj.</p>
+                <p><strong>Reloj:</strong> Se muestra como un contador en la barra de sesión del HUD, junto a otros indicadores del juego.</p>
+                <p><strong>Tinte de color:</strong> Se aplica como un overlay que cubre toda la pantalla (superpuesto al juego).</p>
+                <p><strong>Activar/desactivar:</strong> Usa el hotkey <code>daynightcycle.toggle</code> o configúralo en las opciones de sesión (<code>gui.session.daynightcycle</code>).</p>
             </section>
 
             <!-- Compatibilidad -->
@@ -106,10 +109,10 @@
                 <div class="compatibility-info">
                     <span class="compatibility-badge">Versión del mod: 0.1.0</span>
                     <span class="compatibility-badge">Versión de 0 A.D.: 0.28.0</span>
-                    <span class="compatibility-badge">Idioma: Español</span>
+                    <span class="compatibility-badge">Idioma: Español (textos integrados)</span>
                     <span class="compatibility-badge">Plataforma: Windows, Linux, Mac</span>
                 </div>
-                <p class="mt-3"><strong>Nota:</strong> Este mod es compatible con todas las versiones recientes de 0 A.D. Si tienes problemas, asegúrate de tener la versión 0.28.0 o superior.</p>
+                <p class="mt-3"><strong>Nota:</strong> Los textos de las fases (DIA, NOCHE, AMANECER, ATARDECER) están integrados directamente en el código en español. No usa el sistema de localización de 0 A.D.</p>
             </section>
 
             <!-- Instrucciones de instalación -->

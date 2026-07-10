@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal Names - Mod para 0 A.D. que añade nombres personales únicos a las unidades. Creado por freddyeleazar.">
+    <meta name="description" content="Personal Names - Mod para 0 A.D. que asigna 420 nombres históricos a las unidades según civilización y género. Creado por freddyeleazar.">
     <meta name="keywords" content="0 A.D., mod, nombres personales, unidades, freddyeleazar">
     <meta name="author" content="freddyeleazar">
     
@@ -48,10 +48,10 @@
                     <div class="compatibility-info mb-4">
                         <span class="compatibility-badge">Versión 0.1.0</span>
                         <span class="compatibility-badge">Compatible con 0 A.D. 0.28.0</span>
-                        <span class="compatibility-badge">Español</span>
+                        <span class="compatibility-badge">Español / English</span>
                     </div>
                     
-                    <p class="mb-4">Este mod añade nombres personales únicos a las unidades humanas según su género y civilización. ¡Ahora cada soldado, granjero o artesano tendrá su propio nombre!</p>
+                    <p class="mb-4">Asigna 420 nombres históricos reales a las unidades según civilización y género. Los nombres aparecen en el panel de selección como "Marco (Soldado Romano)". No asigna nombres a los héroes — solo a unidades regulares.</p>
                     
                     <a href="https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/personal_names.zip" class="download-button">
                         ⬇️ Descargar Mod
@@ -62,21 +62,24 @@
             <!-- Descripción ampliada -->
             <section class="mb-5">
                 <h2>📝 Descripción Detallada</h2>
-                <p>El mod Personal Names humaniza tus unidades al asignarles nombres únicos basados en su género y civilización. En el juego original, las unidades solo se identifican por su tipo (como "Legionario" o "Granjero"), pero con este mod, cada unidad tendrá un nombre propio.</p>
+                <p>Personal Names es un mod de simulación que humaniza las unidades al asignarles nombres únicos basados en su civilización. Cuando una unidad es entrenada, se le asigna un nombre de una base de datos de 420 nombres históricos (30 nombres × 14 civilizaciones).</p>
                 
-                <p>Los nombres están cuidadosamente seleccionados para ser culturalmente apropiados para cada civilización del juego. Por ejemplo, las unidades romanas tendrán nombres romanos, las griegas tendrán nombres griegos, y así sucesivamente.</p>
+                <p><strong>Cómo funciona:</strong> El mod intercepta la creación de unidades infantry y asigna un nombre usando un hash determinista basado en el Engine.GetID() de la unidad. Esto garantiza que cada unidad siempre tenga el mismo nombre, pero no se repite en la misma partida.</p>
+                
+                <p><strong>Civilizaciones soportadas:</strong> Atenas, Britanos, Cartago, Esparta, Etruscos, Galos, Gobanitas, Iberos, Indios, Macedonios, Mauryas, Persas, Ptolemaicos, Romanos, Cartagineses, selector, gaia y nacionales.</p>
             </section>
 
             <!-- Características detalladas -->
             <section class="mod-features mb-5">
                 <h3>✨ Características Principales</h3>
                 <ul>
-                    <li><strong>Nombres únicos:</strong> Cada unidad tiene un nombre diferente</li>
-                    <li><strong>Por género:</strong> Nombres masculinos y femeninos apropiados</li>
-                    <li><strong>Por civilización:</strong> Nombres culturalmente correctos para cada civilización</li>
-                    <li><strong>Más de 1000 nombres:</strong> Gran variedad para evitar repeticiones</li>
-                    <li><strong>Fácil identificación:</strong> Ahora puedes reconocer a tus unidades fácilmente</li>
-                    <li><strong>Más inmersión:</strong> El juego se siente más real y personal</li>
+                    <li><strong>420 nombres históricos:</strong> 30 nombres × 14 civilizaciones, basados en datos reales</li>
+                    <li><strong>15 nombres por género:</strong> 15 masculinos y 15 femeninos por civilización</li>
+                    <li><strong>Solo unidades regulares:</strong> No asigna nombres a héroes (ya tienen nombre propio)</li>
+                    <li><strong>Asignación determinista:</strong> Usa el hash del ID de la unidad — siempre el mismo nombre para la misma unidad</li>
+                    <li><strong>Idiomas:</strong> Español (por defecto) e Inglés — cambia según la localización de 0 A.D.</li>
+                    <li><strong>Se muestra en el panel:</strong> Aparece como "Nombre (Tipo de Unidad)" al seleccionar</li>
+                    <li><strong>Sin conflictos:</strong> Verifica que no haya duplicados antes de asignar</li>
                 </ul>
             </section>
 
@@ -85,25 +88,25 @@
                 <h3>🎯 ¿Qué Esperar de Este Mod?</h3>
                 <p>Con este mod podrás:</p>
                 <ul>
-                    <li>Conocer el nombre de cada una de tus unidades</li>
+                    <li>Ver el nombre de cada unidad en el panel de selección (ej: "Marco (Soldado Romano)")</li>
+                    <li>Distinguir mejor entre tus unidades en batallas intensas</li>
                     <li>Crear historias y roles para tus soldados favoritos</li>
-                    <li>Disfrutar de una experiencia más personal en el juego</li>
-                    <li>Aprender sobre nombres de diferentes culturas antiguas</li>
-                    <li>Tener una conexión más emocional con tus unidades</li>
+                    <li>Disfrutar de una experiencia más personal e inmersiva</li>
+                    <li>Ver nombres culturalmente apropiados para cada civilización</li>
+                    <li>Cambiar entre español e inglés desde las opciones de 0 A.D.</li>
                 </ul>
             </section>
 
             <!-- Dónde encontrarlo en el juego -->
             <section class="game-info mb-5">
                 <h3>🔍 ¿Dónde Encontrarlo en el Juego?</h3>
-                <p>Una vez instalado y activado, los nombres aparecerán automáticamente en la información de cada unidad.</p>
-                <p>Para ver el nombre de una unidad:</p>
+                <p>Los nombres aparecen automáticamente en el panel de información de cada unidad.</p>
                 <ol>
                     <li>Haz clic en una unidad para seleccionarla</li>
-                    <li>Mira en el panel de información (generalmente en la parte inferior)</li>
-                    <li>Verás el nombre de la unidad junto a su tipo</li>
+                    <li>En el panel de selección verás el nombre asignado junto al tipo de unidad</li>
+                    <li>Ejemplo: "Marco (Soldado Romano)" en lugar de solo "Soldado Romano"</li>
                 </ol>
-                <p>¡También podrás ver los nombres en las listas de unidades y en los menús de asignación!</p>
+                <p>Los nombres también aparecen en las listas de unidades y en los menús de asignación.</p>
             </section>
 
             <!-- Compatibilidad -->
@@ -112,10 +115,10 @@
                 <div class="compatibility-info">
                     <span class="compatibility-badge">Versión del mod: 0.1.0</span>
                     <span class="compatibility-badge">Versión de 0 A.D.: 0.28.0</span>
-                    <span class="compatibility-badge">Idioma: Español</span>
+                    <span class="compatibility-badge">Idiomas: Español / English (l10n)</span>
                     <span class="compatibility-badge">Plataforma: Windows, Linux, Mac</span>
                 </div>
-                <p class="mt-3"><strong>Nota:</strong> Este mod es compatible con todas las versiones recientes de 0 A.D. Si tienes problemas, asegúrate de tener la versión 0.28.0 o superior.</p>
+                <p class="mt-3"><strong>Nota:</strong> Los textos mostrados ("Soldado Romano", etc.) usan el sistema de localización de 0 A.D. El idioma se cambia desde las opciones del juego.</p>
             </section>
 
             <!-- Instrucciones de instalación -->

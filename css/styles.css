@@ -190,6 +190,12 @@ header nav ul {
   padding: 0;
 }
 
+header nav ul:first-child strong {
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+}
+
 header nav a {
   color: #fff;
   font-weight: 500;
