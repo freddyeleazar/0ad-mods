@@ -51,7 +51,7 @@
                         <span class="compatibility-badge">Español / English</span>
                     </div>
                     
-                    <p class="mb-4">Sistema de progresión con 13 habilidades (7 civiles + 5 militares + 1 civil oculta), 100 niveles y 5 rangos. Las unidades ganan experiencia al realizar acciones y mejoran sus capacidades. La barra de progreso aparece en el panel de selección.</p>
+                    <p class="mb-4">Sistema de progresión con 13 habilidades (7 civiles + 5 militares + 1 civil oculta), 100 niveles y 5 rangos. Las unidades ganan experiencia al realizar acciones y mejoran sus capacidades. La barra de progreso aparece en el tooltip del retrato de la unidad.</p>
                     
                     <a href="https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/skills_mod.zip" class="download-button">
                         ⬇️ Descargar Mod
@@ -62,7 +62,7 @@
             <!-- Descripción ampliada -->
             <section class="mb-5">
                 <h2>📝 Descripción Detallada</h2>
-                <p>Experience Skills es un sistema completo de progresión que asigna experiencia a cada unidad según su tipo y acción. A diferencia del sistema de rangos nativo de 0 A.D., este mod usa una barra de progreso visible que se muestra en el panel de selección.</p>
+                <p>Experience Skills es un sistema completo de progresión que asigna experiencia a cada unidad según su tipo y acción. A diferencia del sistema de rangos nativo de 0 A.D., este mod muestra una barra de progreso de texto en el tooltip del retrato de la unidad.</p>
                 
                 <p><strong>Cómo funciona:</strong> Las unidades ganan experiencia al realizar acciones específicas (recolectar, construir, curar, atacar, etc.). Cada 100 puntos de experiencia, la unidad sube de nivel. Al alcanzar ciertos niveles, desbloquea rangos que otorgan bonificaciones adicionales. La experiencia acumulada es persistente — no se pierde al guardar la partida.</p>
                 
@@ -76,7 +76,7 @@
                     <li><strong>13 habilidades:</strong> 7 civiles (Recolección, Construcción, Botín, Explotación, Caza, Pesca, Curación) + 5 militares (Infantería, Caballería, Asedio, Aeronaves, Marino) + 1 civil oculta</li>
                     <li><strong>100 niveles por habilidad:</strong> Cada nivel requiere más experiencia que el anterior</li>
                     <li><strong>5 rangos:</strong> Recluta → Veterano → Élite → Héroe → Legendario</li>
-                    <li><strong>Barra de progreso:</strong> Se muestra en el panel de selección de cada unidad</li>
+                    <li><strong>Barra de progreso:</strong> Se muestra en el tooltip al pasar el cursor sobre el retrato de la unidad</li>
                     <li><strong>Experiencia persistente:</strong> No se pierde al guardar la partida</li>
                     <li><strong>Idiomas:</strong> Español e Inglés — cambia según la localización de 0 A.D.</li>
                     <li><strong>Sin héroes:</strong> Las unidades heroicas no ganan experiencia</li>
@@ -89,7 +89,7 @@
                 <h3>🎯 ¿Qué Esperar de Este Mod?</h3>
                 <p>Con este mod podrás:</p>
                 <ul>
-                    <li>Ver la barra de progreso de experiencia en el panel de selección</li>
+                    <li>Ver la barra de progreso de experiencia en el tooltip del retrato</li>
                     <li>Cuidar tus unidades experimentadas — son mucho más efectivas</li>
                     <li>Crear ejércitos veteranos que desbloquean habilidades superiores</li>
                     <li>Disfrutar de una progresión visual y satisfactoria</li>
@@ -104,9 +104,9 @@
                 <p>El sistema funciona automáticamente. Para ver las habilidades:</p>
                 <ol>
                     <li>Haz clic en una unidad para seleccionarla</li>
-                    <li>En el panel de selección verás una barra de progreso con el nivel actual</li>
-                    <li>El rango de la unidad se muestra debajo de la barra</li>
-                    <li>Los colores de la barra cambian según el rango: Verde (Recluta), Azul (Veterano), Púrpura (Élite), Dorado (Héroe), Rojo (Legendario)</li>
+                    <li>Pasa el cursor del mouse sobre el retrato de la unidad en el panel de selección</li>
+                    <li>Se desplegará un tooltip con el título "Skills" y la lista de habilidades</li>
+                    <li>Cada habilidad muestra: nombre con color de rango, nivel, barra de progreso de texto (██░░) y efecto</li>
                 </ol>
                 <p>Los datos de experiencia se guardan automáticamente con la partida.</p>
             </section>
