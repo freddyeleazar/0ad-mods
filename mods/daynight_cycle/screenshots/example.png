@@ -1,0 +1,52 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo gradiente día/noche -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#0f3460;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e94560;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sunGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Cielo -->
+  <rect width="800" height="600" fill="url(#skyGradient)"/>
+  
+  <!-- Estrellas -->
+  <circle cx="100" cy="50" r="2" fill="white"/>
+  <circle cx="200" cy="80" r="1.5" fill="white"/>
+  <circle cx="300" cy="30" r="2.5" fill="white"/>
+  <circle cx="400" cy="70" r="1" fill="white"/>
+  <circle cx="500" cy="40" r="2" fill="white"/>
+  <circle cx="600" cy="90" r="1.5" fill="white"/>
+  <circle cx="700" cy="60" r="2.5" fill="white"/>
+  
+  <!-- Luna -->
+  <circle cx="650" cy="100" r="40" fill="#f5f5dc"/>
+  <circle cx="660" cy="90" r="35" fill="url(#skyGradient)"/>
+  
+  <!-- Montañas -->
+  <polygon points="0,400 150,300 300,400" fill="#2d3436"/>
+  <polygon points="200,400 400,250 600,400" fill="#636e72"/>
+  <polygon points="400,400 600,300 800,400" fill="#2d3436"/>
+  
+  <!-- Suelo -->
+  <rect x="0" y="400" width="800" height="200" fill="#0a0a0a"/>
+  
+  <!-- Texto -->
+  <text x="400" y="500" font-family="Arial, sans-serif" font-size="48" fill="#ffd700" text-anchor="middle" font-weight="bold">Day/Night Cycle</text>
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle">Mod para 0 A.D.</text>
+  
+  <!-- Reloj -->
+  <circle cx="700" cy="500" r="50" fill="none" stroke="#ffd700" stroke-width="3"/>
+  <line x1="700" y1="500" x2="700" y2="470" stroke="#ffd700" stroke-width="3"/>
+  <line x1="700" y1="500" x2="720" y2="500" stroke="#ffd700" stroke-width="2"/>
+  
+  <!-- Estrellas brillantes -->
+  <polygon points="150,150 155,165 170,165 158,175 163,190 150,180 137,190 142,175 130,165 145,165" fill="#ffd700"/>
+  <polygon points="350,120 355,135 370,135 358,145 363,160 350,150 337,160 342,145 330,135 345,135" fill="#ffd700"/>
+</svg>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mod Details - 0 A.D. Mods</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/utils.css">
+  <link rel="icon" href="../assets/images/icons/mod-icon.png" type="image/png">
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">0 A.D. Mods</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="../pages/mod-detail.html" class="active" data-i18n="nav.mods">Mods</a></li>
+          <li><a href="../pages/about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="../pages/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="languageSwitcher">
+        <select class="language-switcher-select" style="background: var(--secondary-bg); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: 4px; padding: 6px 10px; cursor: pointer;">
+          <option value="en">EN</option>
+          <option value="es">ES</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="mod-detail">
+    <div class="container">
+      <div class="mod-detail-header">
+        <h1 class="mod-detail-title" id="modTitle">Loading...</h1>
+        <p class="text-secondary" id="modTagline">Mod details...</p>
+        
+        <div class="mod-detail-tabs">
+          <button class="mod-detail-tab active" data-tab="overview">Overview</button>
+          <button class="mod-detail-tab" data-tab="features">Features</button>
+          <button class="mod-detail-tab" data-tab="screenshots">Screenshots</button>
+          <button class="mod-detail-tab" data-tab="install">Install</button>
+          <button class="mod-detail-tab" data-tab="compatibility">Compatibility</button>
+        </div>
+      </div>
+      
+      <div id="modDetailContent">
+        <div class="text-center">
+          <div style="width: 40px; height: 40px; border: 4px solid var(--border-color); border-top: 4px solid var(--accent-primary); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 24px;"></div>
+          <p>Loading mod details...</p>
+          <style>
+            @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+          </style>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="nav mt-64">
+    <div class="container">
+      <p>&copy; 2026 0 A.D. Mods. All rights reserved.</p>
+      <p class="text-secondary mt-8">A community project for sharing 0 A.D. modifications</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/language.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

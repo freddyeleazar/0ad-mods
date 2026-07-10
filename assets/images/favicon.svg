@@ -1,0 +1,10 @@
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo -->
+  <rect width="32" height="32" fill="#5D4E37" rx="4"/>
+  
+  <!-- Letra "A" -->
+  <text x="16" y="22" font-family="serif" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">A</text>
+  
+  <!-- Borde dorado -->
+  <rect x="1" y="1" width="30" height="30" fill="none" stroke="#ffd700" stroke-width="1" rx="3"/>
+</svg>

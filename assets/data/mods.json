@@ -1,0 +1,66 @@
+{
+  "daynight_cycle": {
+    "id": "daynight_cycle",
+    "name": "Day/Night Cycle",
+    "tagline": "Real-time virtual clock with atmospheric color tints",
+    "shortDescription": "A dynamic day/night cycle overlay that displays a real-time virtual clock on the HUD with a full-screen color tint that transitions smoothly through dawn, day, dusk, and night.",
+    "version": "0.1.0",
+    "gameVersion": "0.28.0",
+    "category": "GUI / Immersion",
+    "tags": ["HUD", "atmosphere", "cosmetic", "no-performance-impact"],
+    "screenshots": ["/gamestudio/assets/images/mod-covers/daynight_overlay.svg"],
+    "downloadUrl": "/gamestudio/assets/downloads/daynight_cycle.zip",
+    "detailedDescription": "## What it does\nAdds a persistent HUD overlay showing the current in-game time (00:00–23:59) and phase name (NOCHE / AMANECER / DÍA / ATARDECER), plus a full-screen color tint that shifts in real time: deep midnight blues → warm dawn oranges → bright midday → dusky reds → back to night.\n\n## Key Features\n- Real-time HUD overlay displaying current time and phase\n- Full-screen color tint transitions\n- Zero performance impact (pure GUI shader)\n- Configurable via user settings\n- Bind toggle hotkey\n\n## How it works\nUses `g_SimState.timeElapsed` for precise timing with color keyframes at 0h, 5h, 7h, 8h, 10h, 17h, 19h, 20h, 22h, 24h. The overlay reads the sim state every frame and interpolates between color keyframes based on the current time.",
+    "installInstructions": "1. Download the ZIP file below\n2. Extract to your 0 A.D. mods directory:\n   - **Windows:** `%HOME%\\Documents\\My Games\\0ad\\mods\\`\n   - **Linux:** `~/.local/share/0ad/mods/`\n   - **macOS:** `~/Library/Application Support/0ad/mods/`\n3. Launch 0 A.D. and open Mod Selection (from the main menu)\n4. Enable **Day/Night Cycle** and click Start\n5. Bind a hotkey in Settings → Hotkeys → \"Toggle Day/Night Cycle Overlay\"",
+    "configOptions": [
+      {"key": "gui.session.daynightcycle", "type": "boolean", "default": true, "description": "Enable or disable the day/night overlay entirely"}
+    ],
+    "hotkeys": [
+      {"action": "daynightcycle.toggle", "default": "unbound", "description": "Toggle day/night overlay visibility"}
+    ],
+    "compatibility": "Pure GUI mod — compatible with all gameplay mods. Requires 0 A.D. 0.28.0. No configuration files to edit. Works out of the box.",
+    "author": "nous",
+    "license": "MIT",
+    "sourceCode": "https://github.com/nous/daynight_cycle"
+  },
+  "personal_names": {
+    "id": "personal_names",
+    "name": "Personal Names",
+    "tagline": "Historically accurate individual names for every unit",
+    "shortDescription": "Every human unit receives a unique, historically-accurate personal name based on their civilization and gender — no two soldiers share a name in a single match.",
+    "version": "0.1.0",
+    "gameVersion": "0.28.0",
+    "category": "Gameplay / Immersion",
+    "tags": ["simulation", "units", "historical-authenticity", "localization"],
+    "screenshots": ["/gamestudio/assets/images/mod-covers/personal_names_selection.svg"],
+    "downloadUrl": "/gamestudio/assets/downloads/personal_names.zip",
+    "detailedDescription": "## What it does\nReplaces generic unit names (\"Citizen Soldier\", \"Hoplite\") with individually assigned personal names drawn from authentic historical sources for each civilization and gender. Once a name is used in a match, it won't be reused — every unit feels like an individual.\n\n## Civilizations Covered\n- **Hellenic:** Athenian (democracy figures), Spartan (kings & warriors), Macedonian (Argead dynasty)\n- **Roman:** Republican & Imperial praenomina/nomen\n- **Celtic:** Briton & Gaulish chieftains and priestesses\n- **Carthaginian:** Punic theophoric names\n- **Germanic:** Cherusci, Marcomanni, Gothic royalty\n- **Iberian:** Lusitanian & Celtiberian leaders\n- **Kushite:** Meroitic kings and kandakes\n- **Han Chinese, Mauryan, Persian, Ptolemaic, Seleucid**\n\n## Key Features\n- Over 500 unique historical names across 13 civilizations\n- Gender-appropriate name assignment\n- Names persist across unit lifetime\n- Fully localized (EN/ES)\n- Zero performance impact",
+    "installInstructions": "1. Download the ZIP file below\n2. Extract to your 0 A.D. mods directory:\n   - **Windows:** `%HOME%\\Documents\\My Games\\0ad\\mods\\`\n   - **Linux:** `~/.local/share/0ad/mods/`\n   - **macOS:** `~/Library/Application Support/0ad/mods/`\n3. Launch 0 A.D. and open Mod Selection (from the main menu)\n4. Enable **Personal Names** and click Start\n5. Units will automatically receive unique names when spawned",
+    "configOptions": [],
+    "hotkeys": [],
+    "compatibility": "Overrides `Identity` component via `Engine.ReRegisterComponentType`. Compatible with other mods that don't also override Identity. Requires 0 A.D. 0.28.0.",
+    "author": "nous",
+    "license": "MIT",
+    "sourceCode": "https://github.com/nous/personal_names"
+  },
+  "skills_mod": {
+    "id": "skills_mod",
+    "name": "Experience Skills",
+    "tagline": "RPG-style progression system with 14 unit skills",
+    "shortDescription": "An RPG-style progression system where every unit gains experience and levels up 14 distinct skills — gatherers harvest faster, soldiers hit harder and survive longer, builders construct quicker.",
+    "version": "0.1.0",
+    "gameVersion": "0.28.0",
+    "category": "Gameplay / RPG Systems",
+    "tags": ["progression", "units", "simulation", "RPG", "localization"],
+    "screenshots": ["/gamestudio/assets/images/mod-covers/skills_selection.svg"],
+    "downloadUrl": "/gamestudio/assets/downloads/skills_mod.zip",
+    "detailedDescription": "## Core concept\nUnits learn by doing. A lumberjack who chops wood all game becomes a master Woodcutter. A spearman who survives dozens of melee engagements gains Melee Resistance. A healer who tanks arrows earns Health XP. Every unit tells a story through its skill sheet.\n\n## 14 Skills across 3 categories\n- **Civil:** Forager, Hunter, Farmer, Fisher, Woodcutting, Stonemason, Mining\n- **Military:** Melee Combat, Ranged Combat, Melee Resistance, Ranged Resistance, Health\n- **Construction:** Construction\n\n## How it works\nEach unit tracks experience in relevant skills based on actions performed. XP accumulates and unlocks tiered bonuses. A unit that gathers 100 wood might unlock Level 1 Woodcutting (+10% gather rate), while a veteran soldier with 500 melee kills reaches Level 5 Melee Combat (+25% damage).\n\n## Key Features\n- 14 unique skills with 5 progression levels each\n- XP earned from performing relevant actions\n- Automatic skill assignment — no micromanagement\n- Visual skill display in unit selection panel\n- Fully localized (EN/ES)",
+    "installInstructions": "1. Download the ZIP file below\n2. Extract to your 0 A.D. mods directory:\n   - **Windows:** `%HOME%\\Documents\\My Games\\0ad\\mods\\`\n   - **Linux:** `~/.local/share/0ad/mods/`\n   - **macOS:** `~/Library/Application Support/0ad/mods/`\n3. Launch 0 A.D. and open Mod Selection (from the main menu)\n4. Enable **Experience Skills** and click Start\n5. Units will begin gaining XP from their first action\n6. (Optional) Edit `simulation/data/skills.json` to customize XP thresholds and bonuses",
+    "configOptions": [],
+    "hotkeys": [],
+    "compatibility": "Overrides 4 simulation components via prototype replacement (ResourceGatherer, DelayedDamage, Health, Builder). Compatible with other mods that don't also override these components. Requires 0 A.D. 0.28.0.",
+    "author": "nous",
+    "license": "MIT",
+    "sourceCode": "https://github.com/nous/skills_mod"
+  }
+}

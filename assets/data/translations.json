@@ -1,0 +1,88 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "mods": "Mods",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "0 A.D. Mod Showcase",
+      "subtitle": "Discover and download community-created mods for 0 A.D. that enhance gameplay and bring new experiences to the ancient civilization simulator."
+    },
+    "mod": {
+      "tabs": {
+        "overview": "Overview",
+        "features": "Features",
+        "screenshots": "Screenshots",
+        "install": "Install",
+        "compatibility": "Compatibility"
+      },
+      "titlePrefix": "Mod Details"
+    },
+    "common": {
+      "viewDetails": "View Details",
+      "download": "Download",
+      "close": "Close",
+      "error": "Error",
+      "loading": "Loading...",
+      "tryAgain": "Try Again"
+    },
+    "about": {
+      "title": "About 0 A.D. Mods",
+      "mission": "Our Mission",
+      "welcome": "Welcome to the 0 A.D. Mod Repository",
+      "description": "This project serves as a dedicated platform for the 0 A.D. game community to discover, download, and share custom modifications that enhance gameplay and expand the ancient civilization simulator's capabilities."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "general": "General Inquiries",
+      "support": "Technical Support",
+      "submission": "Mod Submission",
+      "website": "Website Development"
+    }
+  },
+  "es": {
+    "nav": {
+      "home": "Inicio",
+      "mods": "Mods",
+      "about": "Acerca de",
+      "contact": "Contacto"
+    },
+    "hero": {
+      "title": "Galería de Mods 0 A.D.",
+      "subtitle": "Descubre y descarga mods creados por la comunidad para 0 A.D. que mejoran el juego y traen nuevas experiencias al simulador de civilizaciones antiguas."
+    },
+    "mod": {
+      "tabs": {
+        "overview": "Visión general",
+        "features": "Características",
+        "screenshots": "Capturas",
+        "install": "Instalar",
+        "compatibility": "Compatibilidad"
+      },
+      "titlePrefix": "Detalles del Mod"
+    },
+    "common": {
+      "viewDetails": "Ver Detalles",
+      "download": "Descargar",
+      "close": "Cerrar",
+      "error": "Error",
+      "loading": "Cargando...",
+      "tryAgain": "Intentar de nuevo"
+    },
+    "about": {
+      "title": "Acerca de 0 A.D. Mods",
+      "mission": "Nuestra Misión",
+      "welcome": "Bienvenido al Repositorio de Mods 0 A.D.",
+      "description": "Este proyecto sirve como una plataforma dedicada para la comunidad de jugadores de 0 A.D. para descubrir, descargar y compartir modificaciones personalizadas que mejoran el juego y expanden las capacidades del simulador de civilizaciones antiguas."
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "general": "Consultas Generales",
+      "support": "Soporte Técnico",
+      "submission": "Envío de Mods",
+      "website": "Desarrollo del Sitio Web"
+    }
+  }
+}
