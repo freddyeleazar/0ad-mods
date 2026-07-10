@@ -379,6 +379,14 @@ footer strong {
   color: var(--primary-dark);
 }
 
+.mod-detail-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
 .mod-features {
   background: rgba(0, 0, 0, 0.03);
   border-radius: var(--pico-border-radius);
@@ -541,6 +549,7 @@ a:focus, button:focus {
   #hero h1 { font-size: 2rem; }
   .mod-detail-header { flex-direction: column; }
   .mod-detail-image, .mod-detail-info { min-width: 100%; }
+  .mod-detail-title-row { flex-direction: column; text-align: center; }
   .mods-grid { grid-template-columns: 1fr; }
   .mod-card-footer { flex-direction: column; gap: var(--space-sm); text-align: center; }
 }
