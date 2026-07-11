@@ -10,7 +10,7 @@
   <line x1="330" y1="335" x2="330" y2="430" stroke="#2E8B57" stroke-width="4"/>
   <line x1="295" y1="365" x2="365" y2="365" stroke="#2E8B57" stroke-width="4"/>
   <text x="330" y="480" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#2E8B57" font-weight="bold">MALE CITIZEN</text>
-  <text x="330" y="510" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#5D4E37">50 food · 8s train</text>
+  <text x="330" y="510" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#5D4E37">50 food · 10s train</text>
   <text x="330" y="535" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#5D4E37">Builder (Rate 1.5)</text>
   <text x="330" y="560" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#5D4E37">3 hack damage · Meat +50%</text>
   
@@ -20,6 +20,6 @@
   <line x1="855" y1="350" x2="885" y2="350" stroke="#C9A227" stroke-width="4"/>
   <text x="870" y="480" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#C9A227" font-weight="bold">FEMALE CITIZEN</text>
   <text x="870" y="510" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#5D4E37">40 food · 6s train</text>
-  <text x="870" y="535" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#5D4E37">Cannot build</text>
+  <text x="870" y="535" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#5D4E37">Builder (Rate 1.0)</text>
   <text x="870" y="560" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#5D4E37">2 hack damage · Fruit/Grain +50%</text>
 </svg>
