@@ -296,11 +296,16 @@ main {
 
 .mod-card-footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: var(--space-sm);
+  text-align: center;
   padding: var(--space-sm) var(--space-md);
   background: rgba(0, 0, 0, 0.03);
   border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mod-card-footer .button {
+  width: 100%;
 }
 
 .mod-card small {
@@ -550,7 +555,6 @@ a:focus, button:focus {
   .mod-detail-image, .mod-detail-info { min-width: 100%; }
   .mod-detail-title-row { flex-direction: column; text-align: center; }
   .mods-grid { grid-template-columns: 1fr; }
-  .mod-card-footer { flex-direction: column; gap: var(--space-sm); text-align: center; }
 }
 
 /* ============================================
