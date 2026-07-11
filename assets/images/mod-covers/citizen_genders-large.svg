@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 635" width="1200" height="635">
+  <rect width="1200" height="635" fill="#5D4E37"/>
+  <rect x="30" y="30" width="1140" height="575" rx="16" fill="#FDF8F0" stroke="#C9A227" stroke-width="4"/>
+  <text x="600" y="110" text-anchor="middle" font-family="serif" font-size="48" font-weight="bold" fill="#2C1810">Citizen Genders</text>
+  <line x1="300" y1="140" x2="900" y2="140" stroke="#C9A227" stroke-width="3"/>
+  <text x="600" y="180" text-anchor="middle" font-family="serif" font-size="22" fill="#5D4E37">Separate male &amp; female citizen training</text>
+  
+  <rect x="120" y="220" width="420" height="340" rx="10" fill="#E8F5E9" stroke="#2E8B57" stroke-width="2"/>
+  <circle cx="330" cy="290" r="45" fill="none" stroke="#2E8B57" stroke-width="4"/>
+  <line x1="330" y1="335" x2="330" y2="430" stroke="#2E8B57" stroke-width="4"/>
+  <line x1="295" y1="365" x2="365" y2="365" stroke="#2E8B57" stroke-width="4"/>
+  <text x="330" y="480" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#2E8B57" font-weight="bold">MALE CITIZEN</text>
+  <text x="330" y="510" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#5D4E37">50 food · 8s train</text>
+  <text x="330" y="535" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#5D4E37">Builder (Rate 1.5)</text>
+  <text x="330" y="560" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#5D4E37">3 hack damage · Meat +50%</text>
+  
+  <rect x="660" y="220" width="420" height="340" rx="10" fill="#FFF8E1" stroke="#C9A227" stroke-width="2"/>
+  <circle cx="870" cy="285" r="45" fill="none" stroke="#C9A227" stroke-width="4"/>
+  <circle cx="870" cy="380" r="35" fill="none" stroke="#C9A227" stroke-width="4"/>
+  <line x1="855" y1="350" x2="885" y2="350" stroke="#C9A227" stroke-width="4"/>
+  <text x="870" y="480" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#C9A227" font-weight="bold">FEMALE CITIZEN</text>
+  <text x="870" y="510" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#5D4E37">40 food · 6s train</text>
+  <text x="870" y="535" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#5D4E37">Cannot build</text>
+  <text x="870" y="560" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#5D4E37">2 hack damage · Fruit/Grain +50%</text>
+</svg>
