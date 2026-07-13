@@ -4,27 +4,26 @@
       "id": "daynight_cycle",
       "name": "Day/Night Cycle",
       "version": "0.2.0",
-      "summary": "Reloj digital en el HUD con hora virtual (HH:MM hrs) y tinte de color dinámico a pantalla completa. Ciclo de 24 minutos. Hotkey Alt+N.",
+      "summary": "Añade un reloj con la hora virtual (HH:MM) y un tinte de color suave sobre la escena 3D que cambia según la hora del día. Sin cubrir la interfaz. Ciclo de 24 minutos. Se activa con Alt+N.",
       "tagline": "Un tiempo que pasa, un mundo que vive",
-      "description": "<p>El mod Day/Night Cycle añade dos elementos visuales al HUD de 0 A.D.:</p><p><strong>1. Reloj digital en el HUD:</strong> Muestra la hora actual del juego en formato HH:MM con el sufijo &quot;hrs&quot; (ej: &quot;08:08 hrs&quot;). Un ciclo completo dura 1440 segundos de simulación, equivalente a 24 horas de juego a velocidad 1x. El ciclo comienza a las 8:00 (8 AM).</p><p><strong>2. Tinte de color a pantalla completa:</strong> Aplica un overlay de color sobre toda la pantalla que cambia suavemente según la hora virtual. De noche la pantalla se tiñe de azul oscuro, al amanecer de marrón cálido, durante el día es casi transparente y al atardecer se vuelve naranja.</p>",
+      "description": "<p>Day/Night Cycle añade dos cosas al HUD de 0 A.D.:</p><p><strong>Reloj digital:</strong> Muestra la hora del juego en formato HH:MM (ej: &quot;08:08 h&quot;). Un ciclo completo dura 1440 segundos de juego a velocidad 1x, que son 24 horas virtuales. El día comienza a las 8:00 de la mañana. El texto del sufijo (&quot;h&quot; en inglés, &quot;hrs&quot; en español) se adapta al idioma del juego.</p><p><strong>Tinte de color sobre el mundo 3D:</strong> Cubre solo el terreno, edificios y unidades con un color que cambia suavemente según la hora virtual. No tapa los paneles laterales, el chat, el minimapa ni los botones. El color cambia entre 10 puntos clave usando interpolación suave (lineal y cuadrática). De noche se ve azul oscuro, al amanecer marrón cálido, de día casi transparente y al atardecer naranja.</p><p>El reloj y el tinte se pueden mostrar u ocultar juntos con la tecla Alt+N.</p>",
       "features": [
-        "<strong>Reloj en el HUD:</strong> Muestra la hora virtual en formato 24h (HH:MM hrs)",
-        "<strong>Tinte de color dinámico:</strong> La pantalla se tiñe según la hora (azul de noche, naranja al atardecer) con interpolación suave entre 10 keyframes de color",
-        "<strong>Ciclo de 24 minutos:</strong> Un día completo dura 1440 segundos a velocidad 1x",
-        "<strong>Se puede activar/desactivar:</strong> Hotkey <code>Alt+N</code> configurado por defecto",
-        "<strong>Sin afectar el rendimiento:</strong> El overlay es ligero y no interfiere con el juego"
+        "<strong>Reloj en el HUD:</strong> Muestra la hora virtual en formato 24h (HH:MM). El día empieza a las 08:00. El sufijo (&quot;h&quot; o &quot;hrs&quot;) se adapta al idioma del juego.",
+        "<strong>Tinte de color solo sobre la escena 3D:</strong> Cambia suavemente entre 10 colores clave. No cubre la interfaz (chat, paneles, minimapa).",
+        "<strong>Ciclo de 24 minutos:</strong> Un día completo dura 1440 segundos a velocidad 1x.",
+        "<strong>Se activa y desactiva con una tecla:</strong> Presiona <kbd>Alt+N</kbd> para mostrar u ocultar el reloj y el tinte.",
+        "<strong>Accesible para otros mods:</strong> Expone la duración del ciclo (CYCLE_DURATION) para que otros mods como Calendar System puedan usarla."
       ],
       "whatToExpect": [
-        "Saber exactamente qué hora es en el juego con solo mirar el HUD",
-        "Disfrutar de transiciones visuales suaves entre día y noche",
-        "Activar o desactivar el reloj y el tinte con <kbd>Alt+N</kbd>",
-        "Vivir una experiencia más inmersiva con la atmósfera visual del ciclo"
+        "Saber qué hora es en el juego con solo mirar el HUD.",
+        "Ver cómo cambia el color de la pantalla cuando pasa del día a la noche, sin que se tapen los botones ni el chat.",
+        "Ocultar el reloj y el tinte cuando no los necesites con <kbd>Alt+N</kbd>."
       ],
-      "whatToExpectNote": "El mod es puramente visual. No afecta la mecánica de juego, las estadísticas de las unidades ni la eficiencia de ninguna acción.",
+      "whatToExpectNote": "El mod solo cambia lo que ves en la pantalla. No afecta a las unidades, los recursos ni la jugabilidad.",
       "whereToFind": [
-        "<strong>Reloj:</strong> Se muestra en la barra de sesión del HUD con el formato &quot;08:08 hrs&quot;.",
-        "<strong>Tinte de color:</strong> Se aplica como un overlay que cubre toda la pantalla (superpuesto al juego, no intercepta clics).",
-        "<strong>Activar/desactivar:</strong> Presiona <kbd>Alt+N</kbd> para mostrar u ocultar el reloj y el tinte."
+        "<strong>Reloj:</strong> Aparece en la barra superior del HUD con el formato &quot;08:08 h&quot; (o &quot;08:08 hrs&quot; si el juego está en español).",
+        "<strong>Tinte:</strong> Se aplica sobre el mundo 3D (terreno, edificios, unidades) pero no sobre los menús ni la interfaz.",
+        "<strong>Activar/desactivar:</strong> Presiona <kbd>Alt+N</kbd> para mostrar u ocultar ambos."
       ],
       "imageCard": "assets/images/mod-covers/daynight_cycle-card.jpg",
       "imageLarge": "assets/images/mod-covers/daynight_cycle-large.jpg",
@@ -37,12 +36,12 @@
       "version": "0.1.0",
       "summary": "450 nombres históricos reales asignados a unidades según civilización (30 × 15 civs). Se muestra en el panel de selección.",
       "tagline": "Cada soldado tiene una historia, cada nombre cuenta",
-      "description": "<p>Personal Names es un mod de simulación que humaniza las unidades al asignarles nombres únicos basados en su civilización. Cuando una unidad es entrenada, se le asigna un nombre de una base de datos de 450 nombres históricos (30 nombres × 15 civilizaciones).</p><p><strong>Cómo funciona:</strong> El mod intercepta la creación de unidades infantry y asigna un nombre usando un hash determinista basado en el Engine.GetID() de la unidad. Esto garantiza que cada unidad siempre tenga el mismo nombre, pero no se repite en la misma partida.</p><p><strong>Civilizaciones soportadas:</strong> Atenas, Britanos, Cartago, Esparta, Galos, Germanos, Han (China), Iberos, Kush, Macedonios, Mauryas, Persas, Ptolemaicos, Romanos y Seléucidas.</p>",
+      "description": "<p>Personal Names es un mod de simulación que humaniza las unidades al asignarles nombres únicos basados en su civilización. Cuando una unidad es entrenada, se le asigna un nombre de una base de datos de 450 nombres históricos (30 nombres × 15 civilizaciones).</p><p><strong>Cómo funciona:</strong> El mod intercepta la creación de unidades y asigna un nombre de una lista de 30 por civilización. Elige el primer nombre que no se haya usado antes en la partida. Así cada unidad tiene un nombre distinto.</p><p><strong>Civilizaciones soportadas:</strong> Atenas, Britanos, Cartago, Esparta, Galos, Germanos, Han (China), Iberos, Kush, Macedonios, Mauryas, Persas, Ptolemaicos, Romanos y Seléucidas.</p>",
       "features": [
         "<strong>450 nombres históricos:</strong> 30 nombres × 15 civilizaciones, basados en datos reales",
         "<strong>15 nombres por género:</strong> 15 masculinos y 15 femeninos por civilización",
         "<strong>Solo unidades regulares:</strong> No asigna nombres a héroes (ya tienen nombre propio)",
-        "<strong>Asignación determinista:</strong> Usa el hash del ID de la unidad — siempre el mismo nombre para la misma unidad",
+        "<strong>Sin nombres repetidos:</strong> Cada nombre se usa una sola vez por partida",
         "<strong>Se muestra en el panel:</strong> Aparece como &quot;Nombre (Tipo de Unidad)&quot; al seleccionar",
         "<strong>Sin conflictos:</strong> Verifica que no haya duplicados antes de asignar"
       ],
@@ -69,21 +68,20 @@
       "id": "skills_mod",
       "name": "Experience Skills",
       "version": "0.1.0",
-      "summary": "13 habilidades con 100 niveles y 5 rangos. Barra de progreso visible en el panel de selección. Experiencia persistente.",
+      "summary": "13 habilidades con 100 niveles y 5 rangos. Barra de progreso visible en el tooltip del retrato. Experiencia persistente.",
       "tagline": "Las unidades mejoran con la práctica, como en la vida real",
-      "description": "<p>Experience Skills es un sistema completo de progresión que asigna experiencia a cada unidad según su tipo y acción. A diferencia del sistema de rangos nativo de 0 A.D., este mod muestra una barra de progreso de texto en el tooltip del retrato de la unidad.</p><p><strong>Cómo funciona:</strong> Las unidades ganan experiencia al realizar acciones específicas (recolectar, construir, curar, atacar, etc.). Cada 100 puntos de experiencia, la unidad sube de nivel. Al alcanzar ciertos niveles, desbloquea rangos que otorgan bonificaciones adicionales. La experiencia acumulada es persistente — no se pierde al guardar la partida.</p><p><strong>Progresión:</strong> Cada nivel requiere 15 × 1.08^n puntos de experiencia (crecimiento exponencial). Hay 100 niveles posibles y 5 rangos: Recluta (nivel 1), Veterano (nivel 15), Élite (nivel 30), Héroe (nivel 50) y Legendario (nivel 75).</p>",
+      "description": "<p>Experience Skills es un sistema de progresión que da experiencia a las unidades según lo que hacen. A diferencia del sistema de rangos nativo de 0 A.D., este mod muestra una barra de progreso de texto en el tooltip del retrato de la unidad.</p><p><strong>Cómo funciona:</strong> Las unidades ganan experiencia al realizar acciones (recolectar, construir, atacar, recibir daño, etc.). Al acumular suficiente experiencia, la unidad sube de nivel. Cada nivel da una bonificación a la habilidad correspondiente. La experiencia no se pierde al guardar la partida.</p><p><strong>Habilidades:</strong> Hay 13 habilidades en total: 8 civiles (Recolector, Cazador, Agricultor, Pescador, Leñador, Cantero, Minero y Construcción) y 5 militares (Combate Cuerpo a Cuerpo, Combate a Distancia, Resistencia a Corte, Resistencia a Perforación y Salud). Cada habilidad comienza en nivel 0 y puede subir hasta el nivel 100.</p><p><strong>Rangos:</strong> Al subir de nivel, la unidad obtiene rangos que cambian el color del nombre. Aprendiz (nivel 10, verde), Experto (nivel 25, azul), Maestro (nivel 50, morado), Legendario (nivel 75, naranja) y Heroico (nivel 100, dorado).</p><p><strong>Progresión:</strong> Cada nivel requiere más experiencia que el anterior. La fórmula es 15 × 1.08^n puntos. Esto hace que subir de nivel sea más difícil cuanto más alto llegas.</p>",
       "features": [
-        "<strong>13 habilidades:</strong> 7 civiles (Recolección, Construcción, Botín, Explotación, Caza, Pesca, Curación) + 5 militares (Infantería, Caballería, Asedio, Aeronaves, Marino) + 1 civil oculta",
+        "<strong>13 habilidades:</strong> 8 civiles (Recolector, Cazador, Agricultor, Pescador, Leñador, Cantero, Minero, Construcción) + 5 militares (Combate Cuerpo a Cuerpo, Combate a Distancia, Resistencia a Corte, Resistencia a Perforación, Salud)",
         "<strong>100 niveles por habilidad:</strong> Cada nivel requiere más experiencia que el anterior",
-        "<strong>5 rangos:</strong> Recluta → Veterano → Élite → Héroe → Legendario",
+        "<strong>5 rangos:</strong> Aprendiz (nivel 10) → Experto (nivel 25) → Maestro (nivel 50) → Legendario (nivel 75) → Heroico (nivel 100). Cada rango cambia el color del nombre.",
         "<strong>Barra de progreso:</strong> Se muestra en el tooltip al pasar el cursor sobre el retrato de la unidad",
         "<strong>Experiencia persistente:</strong> No se pierde al guardar la partida",
-        "<strong>Sin héroes:</strong> Las unidades heroicas no ganan experiencia",
         "<strong>Cálculo exponencial:</strong> Crecimiento 15×1.08^n para equilibrar el juego"
       ],
       "whatToExpect": [
         "Ver la barra de progreso de experiencia en el tooltip del retrato",
-        "Cuidar tus unidades experimentadas — son mucho más efectivas",
+        "Ver el rango y nivel de cada habilidad en el tooltip del retrato",
         "Crear ejércitos veteranos que desbloquean habilidades superiores",
         "Disfrutar de una progresión visual y satisfactoria",
         "Experimentar el juego con más profundidad estratégica"
@@ -138,33 +136,32 @@
       "id": "citizen_genders",
       "name": "Citizen Genders",
       "version": "0.1.0",
-      "summary": "Entrena ciudadanos hombres y mujeres por separado con estadísticas diferenciadas. Mujeres más rápidas y mejores recolectando. Hombres construyen 50% más rápido y combaten mejor.",
+      "summary": "Entrena ciudadanos hombres y mujeres por separado. Cada uno tiene sus propias estadísticas: mujeres más rápidas y mejores recolectando, hombres construyen más rápido y pelean mejor.",
       "tagline": "Hombres y mujeres, cada uno con su rol",
-      "description": "<p>Citizen Genders modifica la mecánica original de ciudadanos en 0 A.D. En el juego original, al entrenar un civil mixto, el género se asignaba aleatoriamente sin que el jugador pudiera elegir. Este mod separa el entrenamiento en dos botones distintos: uno para ciudadanos hombres y otro para mujeres, permitiendo al jugador decidir qué tipo de unidad producir según sus necesidades estratégicas.</p><p><strong>Diferencias clave:</strong> Las mujeres cuestan menos alimento (40 vs 50), entrenan más rápido (6s vs 10s) y recolectan mejor fruta y grano. Ambos sexos pueden construir y reparar, pero los hombres construyen un 50% más rápido (Rate 1.5 vs 1.0). Los hombres hacen más daño cuerpo a cuerpo (3 vs 2) y recolectan mejor carne.</p><p><strong>Centro Cívico y Casas:</strong> Ambos tipos de ciudadanos se entrenan desde el Centro Cívico. Las Casas también pueden entrenarlos tras investigar las tecnologías correspondientes. Cada partida comienza con 2 hombres y 2 mujeres.</p>",
+      "description": "<p>En el juego original, cuando entrenas un ciudadano, el género se elige al azar. Con Citizen Genders puedes elegir si quieres un hombre o una mujer. Cada tipo tiene sus propias fuerzas y debilidades.</p><p><strong>Mujeres:</strong> Cuestan 40 de alimento, entrenan en 6 segundos. Recogen fruta y grano más rápido que los hombres. También pueden construir, pero a velocidad normal.</p><p><strong>Hombres:</strong> Cuestan 50 de alimento, entrenan en 10 segundos. Construyen un 50% más rápido que las mujeres. Hacen más daño en combate cuerpo a cuerpo (3 de daño cortante contra 2). Recogen carne mejor que las mujeres.</p><p>Ambos tipos se entrenan desde el Centro Cívico. Las Casas también pueden entrenarlos después de investigar las tecnologías correspondientes. Cada partida comienza con 2 hombres y 2 mujeres.</p><p>Las 15 civilizaciones tienen sus propios nombres para cada tipo. Por ejemplo, los espartanos son &quot;Helot&quot; (hombre) y &quot;Spartiâtis&quot; (mujer), y además son más fuertes: tienen 40% más de vida y 50% más de daño. Los romanos son &quot;Plebeian&quot; y &quot;Rōmāna&quot;.</p>",
       "features": [
-        "<strong>Dos botones separados:</strong> Elige conscientemente entre entrenar hombres o mujeres",
-        "<strong>Mujeres más rápidas y económicas:</strong> 40 alimento, 6s de entrenamiento, mejores recolectando fruta y grano. También construyen (Rate 1.0)",
-        "<strong>Hombres constructores más rápidos:</strong> 50 alimento, 10s de entrenamiento, construyen un 50% más rápido (Rate 1.5) y hacen más daño",
-        "<strong>Centro Cívico y Casas:</strong> Se entrenan desde ambas estructuras",
-        "<strong>Inicio equilibrado:</strong> 2 hombres + 2 mujeres al comenzar la partida",
-        "<strong>15 civilizaciones:</strong> Cada civilización tiene sus nombres y variantes específicas (Espartanos más fuertes, Romanos como &quot;Plebeius&quot;, etc.)"
+        "<strong>Dos botones para elegir:</strong> Puedes decidir si entrenas un hombre o una mujer.",
+        "<strong>Mujeres rápidas y económicas:</strong> Cuestan 40 de alimento, entrenan en 6 segundos. Recogen fruta (1.5) y grano (1.0) más rápido que los hombres.",
+        "<strong>Hombres constructores y luchadores:</strong> Cuestan 50 de alimento, entrenan en 10 segundos. Construyen un 50% más rápido (Rate 1.5) y hacen 3 de daño cortante (vs 2 de las mujeres). Recogen carne mejor (1.5 vs 1.0).",
+        "<strong>Centro Cívico y Casas:</strong> Ambos tipos se entrenan desde el Centro Cívico. Las Casas los entrenan tras investigar las tecnologías necesarias.",
+        "<strong>Inicio equilibrado:</strong> La partida comienza con 2 hombres y 2 mujeres.",
+        "<strong>15 civilizaciones con nombres propios:</strong> Cada civilización tiene nombres distintos. Los espartanos son más fuertes (más vida y daño)."
       ],
       "whatToExpect": [
-        "Elegir estratégicamente qué género entrenar según tus necesidades",
-        "Entrenar mujeres rápidamente para recolectar recursos del bosque o cultivos",
-        "Entrenar hombres para construir más rápido tu base y defenderte",
-        "Disfrutar de nombres y roles culturalmente apropiados para cada civilización",
-        "Planificar tu economía con más profundidad y control"
+        "Elegir si quieres un hombre o una mujer según lo que necesites.",
+        "Entrenar mujeres para recolectar fruta y grano más rápido.",
+        "Entrenar hombres para construir tu base más rápido y defenderte mejor.",
+        "Ver nombres diferentes para cada civilización (espartanos, romanos, etc.)."
       ],
       "whatToExpectNote": null,
       "whereToFind": [
-        "Al seleccionar un Centro Cívico o una Casa, verás dos botones de entrenamiento en la cola de producción: uno para ciudadano hombre y otro para ciudadana mujer.",
-        "Los nombres específicos varían según la civilización (ej: &quot;Helot&quot; para Esparta, &quot;Plebeian&quot; para Roma)."
+        "Haz clic en un Centro Cívico o una Casa. Verás dos botones de entrenamiento: uno para hombre y otro para mujer.",
+        "Los nombres cambian según la civilización (ej: Helot en Esparta, Plebeian en Roma)."
       ],
       "imageCard": "assets/images/mod-covers/citizen_genders-card.jpg",
       "imageLarge": "assets/images/mod-covers/citizen_genders-large.jpg",
       "dependsOn": null,
-      "compatibilityNote": "Los nombres de unidades y civilizaciones usan el sistema de localización de 0 A.D."
+      "compatibilityNote": null
     }
   ]
 }
