@@ -155,6 +155,21 @@
     html += '  </ol>';
     html += '</section>';
 
+    // Changelog
+    if (mod.changelog && mod.changelog.length > 0) {
+      html += '<section class="mb-5">';
+      html += '  <h3>📋 Historial de Cambios</h3>';
+      mod.changelog.forEach(function(entry) {
+        html += '  <h4 style="margin-bottom:0.5rem;">v' + entry.version + '</h4>';
+        html += '  <ul>';
+        entry.changes.forEach(function(c) {
+          html += '    <li>' + c + '</li>';
+        });
+        html += '  </ul>';
+      });
+      html += '</section>';
+    }
+
     // Créditos
     html += '<section class="mb-5">';
     html += '  <h3>👥 Créditos</h3>';
