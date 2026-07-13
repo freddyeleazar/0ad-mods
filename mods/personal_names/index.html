@@ -4,22 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal Names - Mod para 0 A.D. que asigna 450 nombres históricos a las unidades según civilización y género. Creado por freddyeleazar.">
-    <meta name="keywords" content="0 A.D., mod, nombres personales, unidades, freddyeleazar">
+    <meta name="keywords" content="0 A.D., mod, nombres, personales, unidades, civilización, freddyeleazar">
     <meta name="author" content="freddyeleazar">
-    
     <title>Personal Names | Mods 0 A.D.</title>
-    
-    <!-- Pico.CSS -->
     <link rel="stylesheet" href="../../css/picocss.min.css">
-    
-    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="../../css/styles.css">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
 </head>
 <body>
-    <!-- Cabecera -->
     <header>
         <nav>
             <ul>
@@ -32,135 +24,14 @@
             </ul>
         </nav>
     </header>
-
-    <!-- Contenido principal -->
     <main class="container">
-        <article class="mod-detail">
-            <!-- Encabezado del mod -->
-            <div class="mod-detail-header">
-                <div class="mod-detail-image">
-                    <img src="../../assets/images/mod-covers/personal_names-large.jpg" alt="Personal Names - Mod de nombres personales para 0 A.D." loading="lazy">
-                </div>
-                <div class="mod-detail-info">
-                    <div class="mod-detail-title-row">
-                        <h1>Personal Names</h1>
-                        <a href="https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/personal_names.zip" class="download-button">
-                            ⬇️ Descargar Mod
-                        </a>
-                    </div>
-                    <p class="mb-3"><em>"Cada soldado tiene una historia, cada nombre cuenta"</em></p>
-                    
-                    <div class="compatibility-info mb-4">
-                        <span class="compatibility-badge">Versión 0.1.0</span>
-                        <span class="compatibility-badge">Compatible con 0 A.D. 0.28.0</span>
-                        <span class="compatibility-badge">Español / English</span>
-                    </div>
-                    
-                    <p class="mb-4">Asigna 420 nombres históricos reales a las unidades según civilización y género. Los nombres aparecen en el panel de selección como "Marco (Soldado Romano)". No asigna nombres a los héroes — solo a unidades regulares.</p>
-                </div>
-            </div>
-
-            <!-- Descripción ampliada -->
-            <section class="mb-5">
-                <h2>📝 Descripción Detallada</h2>
-                <p>Personal Names es un mod de simulación que humaniza las unidades al asignarles nombres únicos basados en su civilización. Cuando una unidad es entrenada, se le asigna un nombre de una base de datos de 450 nombres históricos (30 nombres × 15 civilizaciones).</p>
-                
-                <p><strong>Cómo funciona:</strong> El mod intercepta la creación de unidades infantry y asigna un nombre usando un hash determinista basado en el Engine.GetID() de la unidad. Esto garantiza que cada unidad siempre tenga el mismo nombre, pero no se repite en la misma partida.</p>
-                
-                <p><strong>Civilizaciones soportadas:</strong> Atenas, Britanos, Cartago, Esparta, Galos, Germanos, Han (China), Iberos, Kush, Macedonios, Mauryas, Persas, Ptolemaicos, Romanos y Seléucidas.</p>
-            </section>
-
-            <!-- Características detalladas -->
-            <section class="mod-features mb-5">
-                <h3>✨ Características Principales</h3>
-                <ul>
-                    <li><strong>450 nombres históricos:</strong> 30 nombres × 15 civilizaciones, basados en datos reales</li>
-                    <li><strong>15 nombres por género:</strong> 15 masculinos y 15 femeninos por civilización</li>
-                    <li><strong>Solo unidades regulares:</strong> No asigna nombres a héroes (ya tienen nombre propio)</li>
-                    <li><strong>Asignación determinista:</strong> Usa el hash del ID de la unidad — siempre el mismo nombre para la misma unidad</li>
-                    <li><strong>Idiomas:</strong> Español (por defecto) e Inglés — cambia según la localización de 0 A.D.</li>
-                    <li><strong>Se muestra en el panel:</strong> Aparece como "Nombre (Tipo de Unidad)" al seleccionar</li>
-                    <li><strong>Sin conflictos:</strong> Verifica que no haya duplicados antes de asignar</li>
-                </ul>
-            </section>
-
-            <!-- Qué esperar del mod -->
-            <section class="mb-5">
-                <h3>🎯 ¿Qué Esperar de Este Mod?</h3>
-                <p>Con este mod podrás:</p>
-                <ul>
-                    <li>Ver el nombre de cada unidad en el panel de selección (ej: "Marco (Soldado Romano)")</li>
-                    <li>Distinguir mejor entre tus unidades en batallas intensas</li>
-                    <li>Crear historias y roles para tus soldados favoritos</li>
-                    <li>Disfrutar de una experiencia más personal e inmersiva</li>
-                    <li>Ver nombres culturalmente apropiados para cada civilización</li>
-                    <li>Cambiar entre español e inglés desde las opciones de 0 A.D.</li>
-                </ul>
-            </section>
-
-            <!-- Dónde encontrarlo en el juego -->
-            <section class="game-info mb-5">
-                <h3>🔍 ¿Dónde Encontrarlo en el Juego?</h3>
-                <p>Los nombres aparecen automáticamente en el panel de información de cada unidad.</p>
-                <ol>
-                    <li>Haz clic en una unidad para seleccionarla</li>
-                    <li>En el panel de selección verás el nombre asignado junto al tipo de unidad</li>
-                    <li>Ejemplo: "Marco (Soldado Romano)" en lugar de solo "Soldado Romano"</li>
-                </ol>
-                <p>Los nombres también aparecen en las listas de unidades y en los menús de asignación.</p>
-            </section>
-
-            <!-- Compatibilidad -->
-            <section class="mb-5">
-                <h3>⚙️ Información de Compatibilidad</h3>
-                <div class="compatibility-info">
-                    <span class="compatibility-badge">Versión del mod: 0.1.0</span>
-                    <span class="compatibility-badge">Versión de 0 A.D.: 0.28.0</span>
-                    <span class="compatibility-badge">Idiomas: Español / English (l10n)</span>
-                    <span class="compatibility-badge">Plataforma: Windows, Linux, Mac</span>
-                </div>
-                <p class="mt-3"><strong>Nota:</strong> Los textos mostrados ("Soldado Romano", etc.) usan el sistema de localización de 0 A.D. El idioma se cambia desde las opciones del juego.</p>
-            </section>
-
-            <!-- Instrucciones de instalación -->
-            <section class="installation-steps mb-5">
-                <h4>📋 Instrucciones de Instalación</h4>
-                <ol>
-                    <li><strong>Descarga el mod:</strong> Haz clic en el botón de descarga de arriba.</li>
-                    <li><strong>Busca la carpeta de 0 A.D.:</strong> Generalmente está en:
-                        <ul>
-                            <li><strong>Windows:</strong> <code>C:\Users\[TuUsuario]\Documents\My Games\0ad\mods</code></li>
-                            <li><strong>Linux:</strong> <code>~/.local/share/0ad/mods</code></li>
-                            <li><strong>Mac:</strong> <code>~/Library/Application Support/0ad/mods</code></li>
-                        </ul>
-                    </li>
-                    <li><strong>Crea una carpeta para el mod:</strong> Si no existe, crea una carpeta llamada <code>personal_names</code> dentro de la carpeta "mods".</li>
-                    <li><strong>Copia los archivos:</strong> Extrae el archivo descargado y copia su contenido dentro de la carpeta <code>personal_names</code>.</li>
-                    <li><strong>Abre 0 A.D.:</strong> Inicia el juego.</li>
-                    <li><strong>Activa el mod:</strong> Ve a Opciones → Mods, busca "Personal Names" y actívalo.</li>
-                    <li><strong>¡Listo!</strong> Tus unidades ahora tendrán nombres únicos.</li>
-                </ol>
-            </section>
-
-            <!-- Créditos -->
-            <section class="mb-5">
-                <h3>👥 Créditos</h3>
-                <p><strong>Autor:</strong> freddyeleazar</p>
-                <p><strong>Versión:</strong> 0.1.0</p>
-                <p><strong>Licencia:</strong> GPL v2 (como 0 A.D.)</p>
-            </section>
-
-            <!-- Enlace para volver -->
-            <div class="text-center mt-5">
-                <a href="../../index.html" class="button">← Volver a todos los mods</a>
-            </div>
-        </article>
+        <article class="mod-detail" id="mod-detail-container"></article>
     </main>
-
-    <!-- Pie de página -->
     <footer>
         <p>Creado por <strong>freddyeleazar</strong> | Mods para 0 A.D.</p>
         <p><small>Todos los mods son gratuitos y de código abierto.</small></p>
     </footer>
+    <script>const MOD_ID = 'personal_names'; const DATA_PATH = '../../assets/data/mods.json';</script>
+    <script src="../../assets/js/mods.js"></script>
 </body>
 </html>

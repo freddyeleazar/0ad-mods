@@ -46,87 +46,7 @@
             <h2>Mods Disponibles</h2>
             <p>Estos mods están diseñados para hacer tu juego más divertido y completo. ¡Haz clic en cada mod para ver más detalles!</p>
             
-            <div class="mods-grid">
-                <!-- Mod 1: Day/Night Cycle -->
-                <article class="mod-card">
-                    <img src="assets/images/mod-covers/daynight_cycle-card.jpg" alt="Day/Night Cycle - Mod de ciclo día y noche para 0 A.D." loading="lazy">
-                    <div class="mod-card-content">
-                        <h3>Day/Night Cycle</h3>
-                        <p>Reloj digital en el HUD con hora virtual (HH:MM hrs) y tinte de color dinámico a pantalla completa. Ciclo de 24 minutos. Hotkey Alt+N.</p>
-                        <div class="mod-card-footer">
-                            <small>Compatible con 0 A.D. 0.28.0</small>
-                            <small>Sin requisitos</small>
-                            <small>Español / English</small>
-                            <small>v0.2.0</small>
-                            <a href="mods/daynight_cycle/" class="button">Ver detalles</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Mod 2: Personal Names -->
-                <article class="mod-card">
-                    <img src="assets/images/mod-covers/personal_names-card.jpg" alt="Personal Names - Mod de nombres personales para 0 A.D." loading="lazy">
-                    <div class="mod-card-content">
-                        <h3>Personal Names</h3>
-                        <p>450 nombres históricos reales asignados a unidades según civilización (30 × 15 civs). Se muestra en el panel de selección.</p>
-                        <div class="mod-card-footer">
-                            <small>Compatible con 0 A.D. 0.28.0</small>
-                            <small>Sin requisitos</small>
-                            <small>Español / English</small>
-                            <small>v0.1.0</small>
-                            <a href="mods/personal_names/" class="button">Ver detalles</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Mod 3: Experience Skills -->
-                <article class="mod-card">
-                    <img src="assets/images/mod-covers/skills_mod-card.jpg" alt="Experience Skills - Mod de habilidades para 0 A.D." loading="lazy">
-                    <div class="mod-card-content">
-                        <h3>Experience Skills</h3>
-                        <p>13 habilidades con 100 niveles y 5 rangos. Barra de progreso visible en el panel de selección. Experiencia persistente.</p>
-                        <div class="mod-card-footer">
-                            <small>Compatible con 0 A.D. 0.28.0</small>
-                            <small>Sin requisitos</small>
-                            <small>Español / English</small>
-                            <small>v0.1.0</small>
-                            <a href="mods/skills_mod/" class="button">Ver detalles</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Mod 4: Calendar System -->
-                <article class="mod-card">
-                    <img src="assets/images/mod-covers/calendar_system-card.jpg" alt="Calendar System - Mod de calendario para 0 A.D." loading="lazy">
-                    <div class="mod-card-content">
-                        <h3>Calendar System</h3>
-                        <p>Calendario día/mes/año sincronizado con el ciclo día/noche. 12 meses, 30 días, año 500 a.C. Hotkey Alt+C. Requiere Day/Night Cycle.</p>
-                        <div class="mod-card-footer">
-                            <small>Compatible con 0 A.D. 0.28.0</small>
-                            <small>Requiere: Day/Night Cycle</small>
-                            <small>Español / English</small>
-                            <small>v0.1.0</small>
-                            <a href="mods/calendar_system/" class="button">Ver detalles</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Mod 5: Citizen Genders -->
-                <article class="mod-card">
-                    <img src="assets/images/mod-covers/citizen_genders-card.jpg" alt="Citizen Genders - Mod de ciudadanos por género para 0 A.D." loading="lazy">
-                    <div class="mod-card-content">
-                        <h3>Citizen Genders</h3>
-                        <p>Entrena ciudadanos hombres y mujeres por separado con estadísticas diferenciadas. Mujeres más rápidas y mejores recolectando. Hombres construyen 50% más rápido y combaten mejor.</p>
-                        <div class="mod-card-footer">
-                            <small>Compatible con 0 A.D. 0.28.0</small>
-                            <small>Sin requisitos</small>
-                            <small>Español / English</small>
-                            <small>v0.1.0</small>
-                            <a href="mods/citizen_genders/" class="button">Ver detalles</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
+            <div class="mods-grid" id="mods-container"></div>
         </section>
 
         <!-- Sección de información -->
@@ -181,30 +101,8 @@
         <p><small>Todos los mods son gratuitos y de código abierto.</small></p>
     </footer>
 
-    <!-- Script minimal para interactividad -->
-    <script>
-        // Smooth scroll para enlaces internos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Efecto de fade-in al cargar
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.mod-card');
-            cards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.1}s`;
-                card.classList.add('fade-in');
-            });
-        });
-    </script>
+    <!-- Script principal -->
+    <script>const DATA_PATH = 'assets/data/mods.json';</script>
+    <script src="assets/js/mods.js"></script>
 </body>
 </html>
