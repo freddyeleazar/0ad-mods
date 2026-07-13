@@ -1,8 +1,8 @@
 (function() {
   'use strict';
 
-  var DATA_PATH = typeof DATA_PATH !== 'undefined' ? DATA_PATH : null;
-  var MOD_ID = typeof MOD_ID !== 'undefined' ? MOD_ID : null;
+  var DATA_PATH = window.DATA_PATH || null;
+  var MOD_ID = window.MOD_ID || null;
 
   if (!DATA_PATH) return;
 
