@@ -28,7 +28,24 @@
       "imageCard": "assets/images/mod-covers/daynight_cycle-card.jpg",
       "imageLarge": "assets/images/mod-covers/daynight_cycle-large.jpg",
       "dependsOn": null,
-      "compatibilityNote": null
+      "compatibilityNote": null,
+      "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/daynight_cycle.zip",
+      "changelog": [
+        {
+          "version": "0.2.0",
+          "changes": [
+            "Añadido tinte de color dinámico sobre la escena 3D con 10 keyframes de color e interpolación suave",
+            "Expuesta propiedad CYCLE_DURATION para que otros mods (Calendar System) la consuman",
+            "Sufijo de hora ahora traducible mediante el sistema de localización"
+          ]
+        },
+        {
+          "version": "0.1.0",
+          "changes": [
+            "Lanzamiento inicial: reloj digital en el HUD con ciclo día/noche de 24 minutos"
+          ]
+        }
+      ]
     },
     {
       "id": "personal_names",
@@ -62,7 +79,18 @@
       "imageCard": "assets/images/mod-covers/personal_names-card.jpg",
       "imageLarge": "assets/images/mod-covers/personal_names-large.jpg",
       "dependsOn": null,
-      "compatibilityNote": null
+      "compatibilityNote": null,
+      "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/personal_names.zip",
+      "changelog": [
+        {
+          "version": "0.1.0",
+          "changes": [
+            "Lanzamiento inicial: 450 nombres históricos para 15 civilizaciones",
+            "Nombres asignados por orden de lista sin repetir en la misma partida",
+            "Integración con el panel de selección y tooltips del retrato"
+          ]
+        }
+      ]
     },
     {
       "id": "skills_mod",
@@ -97,7 +125,20 @@
       "imageCard": "assets/images/mod-covers/skills_mod-card.jpg",
       "imageLarge": "assets/images/mod-covers/skills_mod-large.jpg",
       "dependsOn": null,
-      "compatibilityNote": "Los textos de rangos y habilidades usan el sistema de localización de 0 A.D. El idioma se cambia desde las opciones del juego."
+      "compatibilityNote": "Los textos de rangos y habilidades usan el sistema de localización de 0 A.D. El idioma se cambia desde las opciones del juego.",
+      "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/skills_mod.zip",
+      "changelog": [
+        {
+          "version": "0.1.0",
+          "changes": [
+            "Lanzamiento inicial: 13 habilidades (8 civiles + 5 militares) con 100 niveles cada una",
+            "5 rangos: Aprendiz, Experto, Maestro, Legendario, Heroico",
+            "Barra de progreso visual en el tooltip del retrato",
+            "Experiencia persistente al guardar la partida",
+            "Bonificaciones aplicadas mediante ModifiersManager"
+          ]
+        }
+      ]
     },
     {
       "id": "calendar_system",
@@ -130,7 +171,18 @@
       "imageCard": "assets/images/mod-covers/calendar_system-card.jpg",
       "imageLarge": "assets/images/mod-covers/calendar_system-large.jpg",
       "dependsOn": ["daynight_cycle"],
-      "compatibilityNote": "Necesita <strong>Day/Night Cycle</strong> instalado y activado (obtiene la duración del ciclo del reloj). Los textos del calendario usan el sistema de localización de 0 A.D."
+      "compatibilityNote": "Necesita <strong>Day/Night Cycle</strong> instalado y activado (obtiene la duración del ciclo del reloj). Los textos del calendario usan el sistema de localización de 0 A.D.",
+      "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/calendar_system.zip",
+      "changelog": [
+        {
+          "version": "0.1.0",
+          "changes": [
+            "Lanzamiento inicial: calendario día/mes/año sincronizado con Day/Night Cycle",
+            "12 meses de 30 días, año 360 días, comenzando en 500 a.C.",
+            "Formato localizado: nombres de meses y eras traducibles"
+          ]
+        }
+      ]
     },
     {
       "id": "citizen_genders",
@@ -161,7 +213,20 @@
       "imageCard": "assets/images/mod-covers/citizen_genders-card.jpg",
       "imageLarge": "assets/images/mod-covers/citizen_genders-large.jpg",
       "dependsOn": null,
-      "compatibilityNote": null
+      "compatibilityNote": null,
+      "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/citizen_genders.zip",
+      "changelog": [
+        {
+          "version": "0.1.0",
+          "changes": [
+            "Lanzamiento inicial: entrenamiento separado de ciudadanos hombres y mujeres",
+            "Mujeres: 40 alimento, 6s, mejor recolección de fruta y grano",
+            "Hombres: 50 alimento, 10s, construcción 50% más rápida, más daño cuerpo a cuerpo",
+            "15 civilizaciones con nombres y estadísticas diferenciadas (espartanos más fuertes)",
+            "Tecnología unlock_females_house para entrenar mujeres desde las Casas"
+          ]
+        }
+      ]
     }
   ]
 }
