@@ -32,7 +32,7 @@
       html += '      <small>' + (mod.dependsOn ? 'Requiere: ' + getDepNames(mod.dependsOn, data) : 'Sin requisitos') + '</small>';
       html += '      <small>Español / English</small>';
       html += '      <small>v' + mod.version + '</small>';
-      html += '      <a href="mods/' + mod.id + '/" class="button">Ver detalles</a>';
+      html += '      <a href="mods/detalle.html?id=' + mod.id + '" class="button">Ver detalles</a>';
       html += '    </div>';
       html += '  </div>';
       html += '</article>';
@@ -52,7 +52,7 @@
 
     var html = '';
 
-    var prefix = MOD_ID ? '../../' : '';
+    var prefix = window.PREFIX || (MOD_ID ? '../../' : '');
 
     // Header
     html += '<div class="mod-detail-header">';
@@ -180,7 +180,7 @@
 
     // Volver
     html += '<div class="text-center mt-5">';
-    html += '  <a href="../../index.html" class="button">← Volver a todos los mods</a>';
+    html += '  <a href="' + prefix + 'index.html" class="button">← Volver a todos los mods</a>';
     html += '</div>';
 
     container.innerHTML = html;
