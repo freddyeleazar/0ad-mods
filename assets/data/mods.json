@@ -153,8 +153,8 @@
         {
             "id": "calendar_system",
             "name": "Calendar System",
-            "version": "0.1.0",
-            "summary": "Calendario d\u00eda/mes/a\u00f1o sincronizado con el ciclo d\u00eda/noche. 12 meses, 30 d\u00edas, a\u00f1o 500 a.C. Hotkey Alt+C. Requiere Day/Night Cycle.",
+            "version": "0.2.0",
+            "summary": "Calendario d\u00eda/mes/a\u00f1o sincronizado con el ciclo d\u00eda/noche. 12 meses, 30 d\u00edas, a\u00f1o 500 a.C. Hotkey Alt+C. Componente de simulaci\u00f3n para otros mods. Requiere Day/Night Cycle.",
             "tagline": "Cada d\u00eda cuenta en la historia de tu imperio",
             "description": "<p>Calendar System extiende el Day/Night Cycle a\u00f1adiendo un calendario hist\u00f3rico que da contexto temporal a tu partida. Usa la duraci\u00f3n del ciclo d\u00eda/noche como base para calcular d\u00edas, meses y a\u00f1os.</p><p><strong>C\u00f3mo funciona:</strong> Cada ciclo d\u00eda/noche completo equivale a 1 d\u00eda del calendario. Los meses tienen 30 d\u00edas cada uno, y el a\u00f1o tiene 12 meses (360 d\u00edas por a\u00f1o). La fecha se muestra en el HUD con el formato &quot;Day 15, March, 500 BC&quot;.</p><p><strong>L\u00ednea de tiempo:</strong> El calendario comienza en el a\u00f1o 500 a.C. y cuenta hacia atr\u00e1s. Cuando llega al a\u00f1o 0, contin\u00faa hacia la era d.C.</p>",
             "features": [
@@ -164,7 +164,8 @@
                 "<strong>A\u00f1o hist\u00f3rico:</strong> Comienza en el 500 a.C. y progresa hacia el presente",
                 "<strong>Se puede activar/desactivar:</strong> Hotkey <kbd>Alt+C</kbd> configurado por defecto",
                 "<strong>Completamente localizado:</strong> Nombres de meses y eras en espa\u00f1ol (&quot;enero&quot;, &quot;a.C.&quot;, &quot;d.C.&quot;)",
-                "<strong>Dependencia:</strong> Requiere <strong>Day/Night Cycle v0.2.0</strong> o superior instalado y activado"
+                "<strong>Dependencia:</strong> Requiere <strong>Day/Night Cycle v0.2.0</strong> o superior instalado y activado",
+                "<strong>Componente de simulaci\u00f3n CalendarState:</strong> Expone GetSeason(), GetMonthIndex(), GetDayOfMonth() y GetYearString() para que mods como Four Seasons consulten la fecha desde el motor del juego."
             ],
             "whatToExpect": [
                 "Saber en qu\u00e9 fecha del a\u00f1o virtual te encuentras mientras juegas",
@@ -186,6 +187,13 @@
             "compatibilityNote": "Necesita <strong>Day/Night Cycle</strong> instalado y activado (obtiene la duraci\u00f3n del ciclo del reloj). Los textos del calendario usan el sistema de localizaci\u00f3n de 0 A.D.",
             "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/calendar_system.zip",
             "changelog": [
+                {
+                    "version": "0.2.0",
+                    "changes": [
+                        "Nuevo componente de simulaci\u00f3n CalendarState: expone GetSeason(), GetMonthIndex(), GetDayOfMonth() y GetYearString() para otros mods",
+                        "Obtiene la duraci\u00f3n del ciclo desde Day/Night Cycle (CYCLE_DURATION) como fuente \u00fanica de verdad"
+                    ]
+                },
                 {
                     "version": "0.1.0",
                     "changes": [
