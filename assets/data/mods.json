@@ -243,19 +243,21 @@
         {
             "id": "four_seasons",
             "name": "Four Seasons",
-            "version": "1.0.0",
-            "summary": "A\u00f1ade lluvia, cerezos en flor y luci\u00e9rnagas que cambian seg\u00fan la estaci\u00f3n. Llueve m\u00e1s en invierno, los cerezos florecen en primavera y las luci\u00e9rnagas aparecen en las noches de verano.",
+            "version": "1.1.0",
+            "summary": "A\u00f1ade lluvia, cerezos en flor, luci\u00e9rnagas y un overlay de color estacional que cambia seg\u00fan la hora del d\u00eda y la \u00e9poca del a\u00f1o. Llueve m\u00e1s en invierno, los cerezos florecen en primavera y las luci\u00e9rnagas aparecen en las noches de verano.",
             "tagline": "Clima que cambia con el calendario",
             "description": "<p>Four Seasons trae el clima a la vida en 0 A.D. El mod a\u00f1ade lluvia, cerezos en flor y luci\u00e9rnagas que aparecen dependiendo de la estaci\u00f3n, la hora del d\u00eda y el mes del calendario.</p><p>La lluvia es m\u00e1s frecuente en invierno y oto\u00f1o, y rara en verano. Los cerezos florecen durante los d\u00edas de primavera, y las luci\u00e9rnagas brillan en las noches de verano. Los sonidos ambientales tambi\u00e9n cambian: los p\u00e1jaros cantan en primavera y verano, el viento sopla en oto\u00f1o e invierno.</p><p>El mod funciona junto con Calendar System y Day/Night Cycle para mantener todo sincronizado.</p>",
             "features": [
                 "<strong>Lluvia por estaci\u00f3n:</strong> Llueve m\u00e1s en invierno y oto\u00f1o, menos en primavera, y casi nunca en verano.",
                 "<strong>Cerezos en flor:</strong> P\u00e9talos rosados caen del cielo durante los d\u00edas de primavera.",
+                "<strong>Overlay de color estacional:</strong> La pantalla se ti\u00f1e sutilmente seg\u00fan la estaci\u00f3n (verde en primavera, c\u00e1lido en verano, naranja en oto\u00f1o, azul en invierno) y la hora del d\u00eda (noche, amanecer, d\u00eda, atardecer).",
                 "<strong>Luci\u00e9rnagas:</strong> Peque\u00f1os puntos de luz aparecen en las noches de verano.",
                 "<strong>Sonidos estacionales:</strong> P\u00e1jaros cantan en los meses c\u00e1lidos, el viento suena en los meses fr\u00edos.",
                 "<strong>Indicador en pantalla:</strong> Muestra la estaci\u00f3n, el mes y el bioma actual en el HUD."
             ],
             "whatToExpect": [
                 "Ver lluvia m\u00e1s seguido en invierno y oto\u00f1o",
+                "Ver c\u00f3mo el color de la pantalla cambia con las estaciones y la hora del d\u00eda",
                 "Observar cerezos en flor durante los d\u00edas de primavera",
                 "Ver luci\u00e9rnagas brillando en las noches de verano",
                 "Escuchar p\u00e1jaros en clima c\u00e1lido y viento en clima fr\u00edo",
@@ -264,6 +266,7 @@
             "whatToExpectNote": null,
             "whereToFind": [
                 "El clima aparece autom\u00e1ticamente seg\u00fan el calendario y la hora del d\u00eda.",
+                "El overlay de color aparece autom\u00e1ticamente sobre la escena 3D, debajo de la interfaz. No cubre los paneles, el chat ni el minimapa.",
                 "El indicador de estaci\u00f3n se puede activar con la tecla de Mostrar estaci\u00f3n (Alt+S por defecto).",
                 "La lluvia comienza 5 segundos despu\u00e9s de iniciar la partida y se actualiza cada hora del juego."
             ],
@@ -277,9 +280,65 @@
             "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/four_seasons.zip",
             "changelog": [
                 {
+                    "version": "1.1.0",
+                    "changes": [
+                        "A\u00f1adido overlay de color estacional que cambia seg\u00fan la hora del d\u00eda y la estaci\u00f3n (verde en primavera, c\u00e1lido en verano, naranja en oto\u00f1o, azul en invierno)",
+                        "El overlay reemplaza autom\u00e1ticamente al de Day/Night Cycle cuando ambos mods est\u00e1n activos",
+                        "Limpieza de teclas de atajo obsoletas"
+                    ]
+                },
+                {
                     "version": "1.0.0",
                     "changes": [
                         "Lanzamiento inicial del mod"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ecosystem_mod",
+            "name": "Dynamic Ecosystem",
+            "version": "0.1.0",
+            "summary": "Los animales se reproducen, crecen en tres etapas (beb\u00e9, joven, adulto) y migran para repoblar las zonas cazadas. 6 especies incluidas.",
+            "tagline": "Cada vida cuenta, cada cacer\u00eda tiene consecuencias",
+            "description": "<p>En el 0 A.D. original, los animales aparecen m\u00e1gicamente sin que el jugador pueda hacer nada por controlarlo. Dynamic Ecosystem cambia eso por completo.</p><p>Los animales tienen ciclos de vida reales: nacen como cr\u00edas, crecen hasta adultos y pueden migrar cuando su poblaci\u00f3n se ve amenazada. Si cazas demasiado, te quedar\u00e1s sin animales por un buen tiempo.</p><p>Cada manada tiene un tama\u00f1o m\u00e1ximo basado en su poblaci\u00f3n inicial. Cuando una manada pierde animales, la migraci\u00f3n trae nuevos ejemplares desde los bordes del mapa para reponerla, siempre que no superen el l\u00edmite natural.</p><p>Los beb\u00e9s y j\u00f3venes tienen menor tama\u00f1o visual, menos carne y menos puntos de vida. Las animaciones tambi\u00e9n escalan proporcionalmente.</p>",
+            "features": [
+                "<strong>6 especies con ciclo de vida:</strong> Ciervos, jabal\u00edes, ovejas, cabras, vacas y cerdos nacen como cr\u00edas, crecen a j\u00f3venes y luego a adultos.",
+                "<strong>Reproducci\u00f3n autom\u00e1tica:</strong> Cada 24 horas del juego, los animales cercanos de la misma especie pueden tener cr\u00edas.",
+                "<strong>Migraci\u00f3n inteligente:</strong> Si una manada baja del 50% de su poblaci\u00f3n inicial, llegan 2 animales adultos desde el borde del mapa y caminan hasta su nuevo hogar.",
+                "<strong>L\u00edmite natural:</strong> Cada manada no puede superar el 110% de su poblaci\u00f3n inicial. La reproducci\u00f3n se detiene al alcanzar el l\u00edmite.",
+                "<strong>Crecimiento visual:</strong> Las cr\u00edas se ven m\u00e1s peque\u00f1as, tienen menos carne y menos vida. Las animaciones tambi\u00e9n son proporcionales a su tama\u00f1o.",
+                "<strong>Seguidores:</strong> Los beb\u00e9s y j\u00f3venes siguen a su madre. Si la madre muere, siguen al animal m\u00e1s cercano de la misma especie."
+            ],
+            "whatToExpect": [
+                "Los animales ya no aparecen m\u00e1gicamente. Hay que cuidar la caza.",
+                "Las manadas se recuperan solas... si les das tiempo.",
+                "Cazar cr\u00edas da muy poca comida. Mejor esperar a que crezcan.",
+                "Si matas a una madre, sus cr\u00edas buscar\u00e1n a otro adulto para seguir.",
+                "Cuando caces demasiado en una zona, la migraci\u00f3n traer\u00e1 nuevos animales desde los bordes del mapa."
+            ],
+            "whatToExpectNote": "Este mod cambia la forma en que consigues comida. Ya no puedes cazar sin control. Si vac\u00edas una zona, tendr\u00e1s que esperar a que llegue la migraci\u00f3n (cada 72 horas del juego).",
+            "whereToFind": [
+                "La reproducci\u00f3n y migraci\u00f3n ocurren autom\u00e1ticamente. No necesitas hacer nada.",
+                "Busca cr\u00edas cerca de los animales adultos. Son m\u00e1s peque\u00f1as y tienen menos carne.",
+                "Las manadas iniciales del mapa determinan los l\u00edmites de poblaci\u00f3n de cada zona."
+            ],
+            "imageCard": "",
+            "imageLarge": "",
+            "dependsOn": null,
+            "compatibilityNote": null,
+            "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/ecosystem_mod.zip",
+            "changelog": [
+                {
+                    "version": "0.1.0",
+                    "changes": [
+                        "Lanzamiento inicial del mod: 6 especies con reproducci\u00f3n, 3 etapas de crecimiento y migraci\u00f3n inteligente",
+                        "Especies incluidas: ciervos, jabal\u00edes, ovejas, cabras, vacas y cerdos",
+                        "Cada especie tiene 3 etapas: beb\u00e9 (0.7x), joven (0.85x) y adulto",
+                        "Reproducci\u00f3n cada 24h del juego con l\u00edmite de 110% de poblaci\u00f3n inicial",
+                        "Migraci\u00f3n cuando la poblaci\u00f3n cae al 50%: 2 adultos llegan desde bordes del mapa",
+                        "Las cr\u00edas siguen a la madre y buscan reemplazo si ella muere",
+                        "Traducciones en ingl\u00e9s y espa\u00f1ol"
                     ]
                 }
             ]
