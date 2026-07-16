@@ -68,31 +68,31 @@
         {
             "id": "personal_names",
             "name": "Personal Names",
-            "version": "0.1.0",
-            "summary": "450 nombres hist\u00f3ricos reales asignados a unidades seg\u00fan civilizaci\u00f3n (30 \u00d7 15 civs). Se muestra en el panel de selecci\u00f3n.",
+            "version": "0.2.0",
+            "summary": "900 nombres hist\u00f3ricos \u00fanicos para unidades seg\u00fan civilizaci\u00f3n (60 por civ). Se muestra en panel, tooltip y grupos.",
             "tagline": "Cada soldado tiene una historia, cada nombre cuenta",
-            "description": "<p>Personal Names es un mod de simulaci\u00f3n que humaniza las unidades al asignarles nombres \u00fanicos basados en su civilizaci\u00f3n. Cuando una unidad es entrenada, se le asigna un nombre de una base de datos de 450 nombres hist\u00f3ricos (30 nombres \u00d7 15 civilizaciones).</p><p><strong>C\u00f3mo funciona:</strong> El mod intercepta la creaci\u00f3n de unidades y asigna un nombre de una lista de 30 por civilizaci\u00f3n. Elige el primer nombre que no se haya usado antes en la partida. As\u00ed cada unidad tiene un nombre distinto.</p><p><strong>Civilizaciones soportadas:</strong> Atenas, Britanos, Cartago, Esparta, Galos, Germanos, Han (China), Iberos, Kush, Macedonios, Mauryas, Persas, Ptolemaicos, Romanos y Sel\u00e9ucidas.</p>",
+            "description": "<p>Personal Names le asigna a cada unidad un nombre \u00fanico basado en su civilizaci\u00f3n y g\u00e9nero. Cuando entrenas una unidad, el mod elige un nombre de una lista de 60 por civilizaci\u00f3n (30 masculinos + 30 femeninos) sin repetirlo hasta agotar la lista. Luego empieza de nuevo, as\u00ed siempre hay nombre disponible.</p><p><strong>Civilizaciones soportadas:</strong> Atenas, Britanos, Cartago, Esparta, Galos, Germanos, Han (China), Iberos, Kush, Macedonios, Mauryas, Persas, Ptolemaicos, Romanos y Sel\u00e9ucidas.</p><p><strong>C\u00f3mo se ve:</strong> El nombre aparece en lugar del t\u00edtulo espec\u00edfico en el panel de selecci\u00f3n. Tambi\u00e9n se muestra al pasar el cursor sobre el retrato como &quot;Nombre (Tipo de Unidad)&quot;.</p>",
             "features": [
-                "<strong>450 nombres hist\u00f3ricos:</strong> 30 nombres \u00d7 15 civilizaciones, basados en datos reales",
-                "<strong>15 nombres por g\u00e9nero:</strong> 15 masculinos y 15 femeninos por civilizaci\u00f3n",
-                "<strong>Solo unidades regulares:</strong> No asigna nombres a h\u00e9roes (ya tienen nombre propio)",
-                "<strong>Sin nombres repetidos:</strong> Cada nombre se usa una sola vez por partida",
-                "<strong>Se muestra en el panel:</strong> Aparece como &quot;Nombre (Tipo de Unidad)&quot; al seleccionar",
-                "<strong>Sin conflictos:</strong> Verifica que no haya duplicados antes de asignar"
+                "<strong>900 nombres \u00fanicos:</strong> 60 por civilizaci\u00f3n (30 masculinos + 30 femeninos), basados en nombres hist\u00f3ricos reales",
+                "<strong>Ciclado autom\u00e1tico:</strong> Cuando se agotan los nombres, el pool se reinicia para que nunca falte un nombre",
+                "<strong>Sin nombres gen\u00e9ricos:</strong> Nunca ver\u00e1s &quot;Plebeyo&quot; o &quot;Artesano&quot; como nombre propio",
+                "<strong>Solo unidades regulares:</strong> H\u00e9roes conservan su nombre original",
+                "<strong>Traducido al espa\u00f1ol:</strong> Los nombres aparecen en tu idioma si hay traducci\u00f3n disponible (ingl\u00e9s y espa\u00f1ol incluidos)",
+                "<strong>Tooltip en el retrato:</strong> Muestra &quot;Nombre (Tipo de Unidad)&quot; al pasar el cursor",
+                "<strong>Panel de entidad:</strong> El nombre aparece tambi\u00e9n en los paneles de grupos de unidades"
             ],
             "whatToExpect": [
-                "Ver el nombre de cada unidad en el panel de selecci\u00f3n (ej: &quot;Marco (Soldado Romano)&quot;)",
-                "Distinguir mejor entre tus unidades en batallas intensas",
-                "Crear historias y roles para tus soldados favoritos",
-                "Disfrutar de una experiencia m\u00e1s personal e inmersiva",
-                "Ver nombres culturalmente apropiados para cada civilizaci\u00f3n"
+                "Ver el nombre \u00fanico de cada unidad en el panel de selecci\u00f3n",
+                "Pasar el cursor sobre el retrato y ver &quot;Nombre (Tipo de Unidad)&quot; en el tooltip",
+                "Distinguir mejor tus unidades en batallas intensas",
+                "Crear historias para tus soldados favoritos",
+                "Nombres culturalmente apropiados para cada civilizaci\u00f3n"
             ],
             "whatToExpectNote": null,
             "whereToFind": [
-                "Haz clic en una unidad para seleccionarla.",
-                "En el panel de selecci\u00f3n ver\u00e1s el nombre asignado junto al tipo de unidad.",
-                "Ejemplo: &quot;Marco (Soldado Romano)&quot; en lugar de solo &quot;Soldado Romano&quot;.",
-                "Los nombres tambi\u00e9n aparecen en las listas de unidades y en los men\u00fas de asignaci\u00f3n."
+                "Al seleccionar una unidad, su nombre aparece en el panel de selecci\u00f3n inferior.",
+                "Al pasar el cursor sobre el retrato de la unidad, el tooltip muestra el nombre.",
+                "Los nombres tambi\u00e9n se ven en los paneles de grupos (control groups)."
             ],
             "imageCard": "assets/images/mod-covers/personal_names-card.jpg",
             "imageLarge": "assets/images/mod-covers/personal_names-large.jpg",
@@ -101,11 +101,23 @@
             "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/personal_names.zip",
             "changelog": [
                 {
+                    "version": "0.2.0",
+                    "changes": [
+                        "Duplicado el pool de nombres: 900 nombres hist\u00f3ricos (60 por civilizaci\u00f3n, 30 masculinos + 30 femeninos)",
+                        "A\u00f1adido ciclado autom\u00e1tico: cuando se agotan los nombres, el pool se reinicia para que siempre haya nombre disponible",
+                        "Corregido bug de nombres gen\u00e9ricos (ej: 'Plebeyo' ya no aparece como nombre propio)",
+                        "A\u00f1adidas traducciones al espa\u00f1ol (es) con 900 nombres completamente localizados",
+                        "A\u00f1adido tooltip en el retrato: muestra 'Nombre (Tipo de Unidad)' al pasar el cursor",
+                        "A\u00f1adido soporte para paneles de grupos de unidades",
+                        "Mejorada la seguridad con funciones an\u00f3nimas (IIFE) para evitar conflictos entre mods"
+                    ]
+                },
+                {
                     "version": "0.1.0",
                     "changes": [
                         "Lanzamiento inicial: 450 nombres hist\u00f3ricos para 15 civilizaciones",
                         "Nombres asignados por orden de lista sin repetir en la misma partida",
-                        "Integraci\u00f3n con el panel de selecci\u00f3n y tooltips del retrato"
+                        "Integraci\u00f3n con el panel de selecci\u00f3n"
                     ]
                 }
             ]
