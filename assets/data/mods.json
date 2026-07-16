@@ -3,14 +3,14 @@
         {
             "id": "daynight_cycle",
             "name": "Day/Night Cycle",
-            "version": "0.2.1",
-            "summary": "A\u00f1ade un reloj con la hora virtual (HH:MM) y un tinte de color suave sobre la escena 3D que cambia seg\u00fan la hora del d\u00eda. Sin cubrir la interfaz. Ciclo de 24 minutos. Se activa con Alt+N. Compatible con Four Seasons.",
+            "version": "0.2.2",
+            "summary": "A\u00f1ade un reloj con la hora virtual (HH:MM) y un tinte de color suave sobre la escena 3D que cambia seg\u00fan la hora del d\u00eda. Sin cubrir la interfaz. Ciclo de 15 minutos. Se activa con Alt+N. Compatible con Four Seasons.",
             "tagline": "Un tiempo que pasa, un mundo que vive",
-            "description": "<p>Day/Night Cycle a\u00f1ade dos cosas al HUD de 0 A.D.:</p><p><strong>Reloj digital:</strong> Muestra la hora del juego en formato HH:MM (ej: &quot;08:08 h&quot;). Un ciclo completo dura 1440 segundos de juego a velocidad 1x, que son 24 horas virtuales. El d\u00eda comienza a las 8:00 de la ma\u00f1ana. El texto del sufijo (&quot;h&quot; en ingl\u00e9s, &quot;hrs&quot; en espa\u00f1ol) se adapta al idioma del juego.</p><p><strong>Tinte de color sobre el mundo 3D:</strong> Cubre solo el terreno, edificios y unidades con un color que cambia suavemente seg\u00fan la hora virtual. No tapa los paneles laterales, el chat, el minimapa ni los botones. El color cambia entre 10 puntos clave usando interpolaci\u00f3n suave (lineal y cuadr\u00e1tica). De noche se ve azul oscuro, al amanecer marr\u00f3n c\u00e1lido, de d\u00eda casi transparente y al atardecer naranja.</p><p>El reloj y el tinte se pueden mostrar u ocultar juntos con la tecla Alt+N.</p><p><strong>Compatible con Four Seasons:</strong> Si el mod Four Seasons est\u00e1 activo, el tinte de color se oculta autom\u00e1ticamente para que Four Seasons controle los colores de la pantalla. El reloj digital sigue funcionando siempre.</p>",
+            "description": "<p>Day/Night Cycle a\u00f1ade dos cosas al HUD de 0 A.D.:</p><p><strong>Reloj digital:</strong> Muestra la hora del juego en formato HH:MM (ej: &quot;08:08 h&quot;). Un ciclo completo dura 900 segundos de juego a velocidad 1x, que son 24 horas virtuales (15 minutos reales). El d\u00eda comienza a las 8:00 de la ma\u00f1ana. El texto del sufijo (&quot;h&quot; en ingl\u00e9s, &quot;hrs&quot; en espa\u00f1ol) se adapta al idioma del juego.</p><p><strong>Tinte de color sobre el mundo 3D:</strong> Cubre solo el terreno, edificios y unidades con un color que cambia suavemente seg\u00fan la hora virtual. No tapa los paneles laterales, el chat, el minimapa ni los botones. El color cambia entre 10 puntos clave usando interpolaci\u00f3n suave (lineal y cuadr\u00e1tica). De noche se ve azul oscuro, al amanecer marr\u00f3n c\u00e1lido, de d\u00eda casi transparente y al atardecer naranja.</p><p>El reloj y el tinte se pueden mostrar u ocultar juntos con la tecla Alt+N.</p><p><strong>Compatible con Four Seasons:</strong> Si el mod Four Seasons est\u00e1 activo, el tinte de color se oculta autom\u00e1ticamente para que Four Seasons controle los colores de la pantalla. El reloj digital sigue funcionando siempre.</p>",
             "features": [
                 "<strong>Reloj en el HUD:</strong> Muestra la hora virtual en formato 24h (HH:MM). El d\u00eda empieza a las 08:00. El sufijo (&quot;h&quot; o &quot;hrs&quot;) se adapta al idioma del juego.",
                 "<strong>Tinte de color solo sobre la escena 3D:</strong> Cambia suavemente entre 10 colores clave. No cubre la interfaz (chat, paneles, minimapa).",
-                "<strong>Ciclo de 24 minutos:</strong> Un d\u00eda completo dura 1440 segundos a velocidad 1x.",
+                "<strong>Ciclo de 15 minutos:</strong> Un d\u00eda completo dura 900 segundos a velocidad 1x.",
                 "<strong>Se activa y desactiva con una tecla:</strong> Presiona <kbd>Alt+N</kbd> para mostrar u ocultar el reloj y el tinte.",
                 "<strong>Accesible para otros mods:</strong> Expone la duraci\u00f3n del ciclo (CYCLE_DURATION) para que otros mods como Calendar System puedan usarla.",
                 "<strong>Compatible con Four Seasons:</strong> Si Four Seasons est\u00e1 activo, su overlay reemplaza autom\u00e1ticamente al tint de Day/Night Cycle. El reloj sigue siempre visible.",
@@ -153,7 +153,7 @@
         {
             "id": "calendar_system",
             "name": "Calendar System",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "summary": "Calendario d\u00eda/mes/a\u00f1o sincronizado con el ciclo d\u00eda/noche. 12 meses, 30 d\u00edas, a\u00f1o 500 a.C. Hotkey Alt+C. Componente de simulaci\u00f3n para otros mods. Requiere Day/Night Cycle.",
             "tagline": "Cada d\u00eda cuenta en la historia de tu imperio",
             "description": "<p>Calendar System extiende el Day/Night Cycle a\u00f1adiendo un calendario hist\u00f3rico que da contexto temporal a tu partida. Usa la duraci\u00f3n del ciclo d\u00eda/noche como base para calcular d\u00edas, meses y a\u00f1os.</p><p><strong>C\u00f3mo funciona:</strong> Cada ciclo d\u00eda/noche completo equivale a 1 d\u00eda del calendario. Los meses tienen 30 d\u00edas cada uno, y el a\u00f1o tiene 12 meses (360 d\u00edas por a\u00f1o). La fecha se muestra en el HUD con el formato &quot;Day 15, March, 500 BC&quot;.</p><p><strong>L\u00ednea de tiempo:</strong> El calendario comienza en el a\u00f1o 500 a.C. y cuenta hacia atr\u00e1s. Cuando llega al a\u00f1o 0, contin\u00faa hacia la era d.C.</p>",
@@ -187,6 +187,12 @@
             "compatibilityNote": "Necesita <strong>Day/Night Cycle</strong> instalado y activado (obtiene la duraci\u00f3n del ciclo del reloj). Los textos del calendario usan el sistema de localizaci\u00f3n de 0 A.D.",
             "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/calendar_system.zip",
             "changelog": [
+                {
+                    "version": "0.2.1",
+                    "changes": [
+                        "Corregida lectura de CYCLE_DURATION: ahora consulta el componente de simulaci\u00f3n DayNightCycle v\u00eda GuiInterfaceCall"
+                    ]
+                },
                 {
                     "version": "0.2.0",
                     "changes": [
