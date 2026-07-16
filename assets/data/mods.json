@@ -453,8 +453,8 @@
                 "<strong>Recursos:</strong> Al seleccionar un reto\u00f1o o \u00e1rbol joven, ver\u00e1s que tiene menos recursos que uno adulto.",
                 "<strong>Requiere Day/Night Cycle:</strong> El mod Forest Regrowth necesita el mod Day/Night Cycle para medir el tiempo."
             ],
-            "imageCard": "",
-            "imageLarge": "",
+            "imageCard": "assets/images/mod-covers/forest_regrowth-card.jpg",
+            "imageLarge": "assets/images/mod-covers/forest_regrowth-large.jpg",
             "dependsOn": [
                 "daynight_cycle"
             ],
