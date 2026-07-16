@@ -123,70 +123,80 @@
             ]
         },
         {
+            "id": "skills_mod",
+            "name": "Experience Skills",
+            "version": "0.3.0",
+            "summary": "13 habilidades con 100 niveles, 5 rangos con colores (Aprendiz, Experto, Maestro, Legendario, Heroico), barra de progreso coloreada en el tooltip del retrato. Incluye construcci\u00f3n y reparaci\u00f3n.",
+            "tagline": "Cada unidad cuenta su propia historia de batallas",
+            "description": "<p>Experience Skills da experiencia a las unidades seg\u00fan lo que hacen. A diferencia del sistema de rangos nativo de 0 A.D., este mod muestra una barra de progreso coloreada en el tooltip del retrato de la unidad.</p><p><strong>\u00bfC\u00f3mo funciona?</strong> Las unidades ganan XP al realizar acciones (recolectar, construir, atacar, recibir da\u00f1o). Al acumular suficiente XP, la unidad sube de nivel. Cada nivel da una bonificaci\u00f3n a la habilidad correspondiente.</p><p><strong>13 habilidades:</strong> 8 civiles (Recolector, Cazador, Agricultor, Pescador, Le\u00f1ador, Cantero, Minero, Construcci\u00f3n) + 5 militares (Combate Cuerpo a Cuerpo, Combate a Distancia, Resistencia a Corte, Resistencia a Perforaci\u00f3n, Salud). Cada habilidad sube hasta el nivel 100.</p><p><strong>Construcci\u00f3n:</strong> Las unidades constructoras ganan XP cada segundo mientras construyen o reparan. Cuanto m\u00e1s practican, m\u00e1s r\u00e1pido construyen. Al nivel 100 construyen 5 veces m\u00e1s r\u00e1pido.</p><p><strong>5 rangos con colores:</strong> Aprendiz (nivel 10, verde), Experto (nivel 25, azul), Maestro (nivel 50, p\u00farpura), Legendario (nivel 75, naranja), Heroico (nivel 100, dorado). El color se aplica al nombre de la habilidad y a la barra de progreso.</p><p><strong>Progresi\u00f3n:</strong> Cada nivel requiere m\u00e1s experiencia que el anterior (curva exponencial 15 \u00d7 1.08^n). Los primeros niveles son r\u00e1pidos, pero llegar a los rangos altos requiere muchas horas de juego.</p><p><strong>Bonificaciones:</strong> Ataque cuerpo a cuerpo y a distancia +4% por nivel (hasta 5x al 100). Resistencia +0.35 por nivel (hasta +35). Salud +4 HP por nivel (hasta +400). Recolecci\u00f3n +2% por nivel (hasta 3x). Construcci\u00f3n +4% por nivel (hasta 5x).</p>",
+            "features": [
+                "<strong>13 habilidades:</strong> 8 civiles (Recolector, Cazador, Agricultor, Pescador, Le\u00f1ador, Cantero, Minero, Construcci\u00f3n) + 5 militares (Combate Cuerpo a Cuerpo, Combate a Distancia, Resistencia a Corte, Resistencia a Perforaci\u00f3n, Salud)",
+                "<strong>100 niveles por habilidad:</strong> Cada nivel requiere m\u00e1s experiencia que el anterior (curva exponencial 15\u00d71.08^n)",
+                "<strong>5 rangos con colores:</strong> Aprendiz (verde, nivel 10), Experto (azul, nivel 25), Maestro (p\u00farpura, nivel 50), Legendario (naranja, nivel 75), Heroico (dorado, nivel 100). El color se aplica al nombre y a la barra de progreso.",
+                "<strong>Barra de progreso coloreada:</strong> Aparece en el tooltip al pasar el cursor sobre el retrato. Usa el color del rango actual (verde/azul/p\u00farpura/naranja/dorado).",
+                "<strong>Construcci\u00f3n y reparaci\u00f3n:</strong> Las unidades constructoras ganan XP cada segundo mientras trabajan. A nivel 100 construyen 5 veces m\u00e1s r\u00e1pido.",
+                "<strong>Bonificaciones din\u00e1micas:</strong> Cada nivel otorga una bonificaci\u00f3n calculada en tiempo real. Sin archivos de aura est\u00e1ticos.",
+                "<strong>Experiencia persistente:</strong> No se pierde al guardar la partida. Se serializa y deserializa autom\u00e1ticamente.",
+                "<strong>Compatible con personal_names:</strong> Funciona junto con el mod de nombres propios sin conflictos."
+            ],
+            "whatToExpect": [
+                "Ver la barra de progreso coloreada en el tooltip del retrato de cada unidad.",
+                "Ver el rango (Aprendiz, Experto, Maestro, Legendario, Heroico) y nivel de cada habilidad.",
+                "Crear ej\u00e9rcitos veteranos con unidades que mejoran con el tiempo.",
+                "Identificarte con tus unidades gracias a su progresi\u00f3n \u00fanica (combinado con personal_names).",
+                "Disfrutar de una progresi\u00f3n adictiva donde cada nivel cuenta.",
+                "Experimentar el juego con m\u00e1s profundidad estrat\u00e9gica."
+            ],
+            "whatToExpectNote": "Compatible con el mod personal_names que asigna nombres propios a las unidades.",
             "whereToFind": [
                 "Haz clic en una unidad para seleccionarla.",
-                "Pasa el cursor del mouse sobre el retrato de la unidad en el panel de selecci\\u00f3n.",
-                "Se desplegar\\u00e1 un tooltip con el t\\u00edtulo \\u0022Skills\\u0022 y la lista de habilidades.",
+                "Pasa el cursor del mouse sobre el retrato de la unidad en el panel de selecci\u00f3n.",
+                "Se desplegar\u00e1 un tooltip con el t\u00edtulo \"Skills\" y la lista de habilidades.",
                 "Cada habilidad muestra: nombre con color de rango, nivel, barra de progreso coloreada y efecto.",
-                "Los datos de experiencia se guardan autom\\u00e1ticamente con la partida."
+                "Los datos de experiencia se guardan autom\u00e1ticamente con la partida."
             ],
-            "id": "skills_mod",
-            "features": [
-                "<strong>13 habilidades:</strong> 8 civiles (Recolector, Cazador, Agricultor, Pescador, Le\\u00f1ador, Cantero, Minero, Construcci\\u00f3n) + 5 militares (Combate Cuerpo a Cuerpo, Combate a Distancia, Resistencia a Corte, Resistencia a Perforaci\\u00f3n, Salud)",
-                "<strong>100 niveles por habilidad:</strong> Cada nivel requiere m\\u00e1s experiencia que el anterior (curva exponencial 15\\u00d71.08^n)",
-                "<strong>5 rangos con colores:</strong> Aprendiz (verde, nivel 10), Experto (azul, nivel 25), Maestro (morado, nivel 50), Legendario (naranja, nivel 75), Heroico (dorado, nivel 100). El color se aplica al nombre y a la barra de progreso.",
-                "<strong>Barra de progreso coloreada:</strong> Se muestra en el tooltip al pasar el cursor sobre el retrato de la unidad. La barra usa el color del rango actual.",
-                "<strong>Construcci\\u00f3n y reparaci\\u00f3n:</strong> Las unidades constructoras ganan XP cada segundo mientras trabajan. A nivel 100 construyen 5 veces m\\u00e1s r\\u00e1pido.",
-                "<strong>Experiencia persistente:</strong> No se pierde al guardar la partida. Se serializa y deserializa autom\\u00e1ticamente.",
-                "<strong>Bonificaciones din\\u00e1micas:</strong> Calculadas en tiempo real seg\\u00fan el nivel actual. Sin archivos de aura est\\u00e1ticos.",
-                "<strong>Compatible con personal_names:</strong> El mod funciona junto con el mod de nombres propios sin conflictos."
-            ],
-            "dependsOn": null,
-            "compatibilityNote": "Compatible con el mod personal_names. Los textos de rangos y habilidades usan el sistema de localizaci\\u00f3n de 0 A.D. El idioma se cambia desde las opciones del juego.",
-            "name": "Experience Skills",
-            "whatToExpect": [
-                "Ver la barra de progreso de experiencia coloreada en el tooltip del retrato",
-                "Ver el rango (Aprendiz, Experto, Maestro, Legendario, Heroico) y nivel de cada habilidad",
-                "Crear ej\\u00e9rcitos veteranos con unidades que mejoran con el tiempo",
-                "Identificarte con tus unidades gracias a su progresi\\u00f3n \\u00fanica (combinado con personal_names)",
-                "Disfrutar de una progresi\\u00f3n adictiva donde cada nivel cuenta",
-                "Experimentar el juego con m\\u00e1s profundidad estrat\\u00e9gica"
-            ],
-            "tagline": "Cada unidad cuenta su propia historia de batallas",
-            "description": "<p>Experience Skills es un sistema de progresi\\u00f3n que da experiencia a las unidades seg\\u00fan lo que hacen. A diferencia del sistema de rangos nativo de 0 A.D., este mod muestra una barra de progreso coloreada en el tooltip del retrato de la unidad.</p><p><strong>\\u00bfC\\u00f3mo funciona?</strong> Las unidades ganan experiencia al realizar acciones (recolectar, construir, atacar, recibir da\\u00f1o). Al acumular suficiente experiencia, la unidad sube de nivel. Cada nivel da una bonificaci\\u00f3n a la habilidad correspondiente. La experiencia no se pierde al guardar la partida.</p><p><strong>Habilidades:</strong> Hay 13 habilidades en total: 8 civiles (Recolector, Cazador, Agricultor, Pescador, Le\\u00f1ador, Cantero, Minero y Construcci\\u00f3n) y 5 militares (Combate Cuerpo a Cuerpo, Combate a Distancia, Resistencia a Corte, Resistencia a Perforaci\\u00f3n y Salud). Cada habilidad comienza en nivel 0 y puede subir hasta el nivel 100.</p><p><strong>Construcci\\u00f3n:</strong> Las unidades constructoras ahora ganan experiencia al construir o reparar edificios. Cuanto m\\u00e1s practican, m\\u00e1s r\\u00e1pido construyen, hasta 5 veces m\\u00e1s r\\u00e1pido en el nivel m\\u00e1ximo.</p><p><strong>Rangos y colores:</strong> Al subir de nivel, la unidad obtiene rangos que cambian el color del nombre y la barra de progreso. Aprendiz (nivel 10, verde), Experto (nivel 25, azul), Maestro (nivel 50, morado), Legendario (nivel 75, naranja) y Heroico (nivel 100, dorado).</p><p><strong>Progresi\\u00f3n:</strong> Cada nivel requiere m\\u00e1s experiencia que el anterior. La f\\u00f3rmula es 15 \\u00d7 1.08^n puntos. Esto hace que subir de nivel sea m\\u00e1s dif\\u00edcil cuanto m\\u00e1s alto llegas, dando una sensaci\\u00f3n de logro continua.</p><p><strong>Bonificaciones acumulativas:</strong> A diferencia de la versi\\u00f3n anterior que ten\\u00eda solo 3 niveles fijos, ahora cada nivel otorga una bonificaci\\u00f3n peque\\u00f1a pero constante. Por ejemplo, el da\\u00f1o cuerpo a cuerpo aumenta 4% por nivel, la salud aumenta 4 puntos por nivel, y la velocidad de construcci\\u00f3n aumenta 4% por nivel.</p>",
-            "version": "0.2.0",
-            "summary": "13 habilidades con 100 niveles y 5 rangos. Barra de progreso coloreada en el tooltip del retrato.",
             "imageCard": "",
-            "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/skills_mod.zip",
             "imageLarge": "",
+            "dependsOn": null,
+            "compatibilityNote": "Compatible con el mod personal_names. Los textos de rangos y habilidades usan el sistema de localizaci\u00f3n de 0 A.D.",
+            "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/skills_mod.zip",
             "changelog": [
+                {
+                    "version": "0.3.0",
+                    "changes": [
+                        "Nuevo sistema de 100 niveles por habilidad con curva exponencial (antes: 3 niveles fijos)",
+                        "5 rangos con nombres y colores: Aprendiz (verde, lv.10), Experto (azul, lv.25), Maestro (p\u00farpura, lv.50), Legendario (naranja, lv.75), Heroico (dorado, lv.100)",
+                        "Barra de progreso coloreada con el color del rango actual en el tooltip",
+                        "Nueva habilidad Construcci\u00f3n: XP al construir y reparar, hasta 5x velocidad al nivel 100",
+                        "Bonificaciones din\u00e1micas por nivel calculadas en tiempo real (sin archivos de aura)",
+                        "Corregido formato de colores en tooltips (hex convertido a colores nombrados)",
+                        "Corregida precisi\u00f3n decimal en la visualizaci\u00f3n de XP",
+                        "Eliminados 39 archivos de aura JSON (reemplazados por c\u00e1lculo din\u00e1mico)",
+                        "Compatibilidad con personal_names: variables envueltas en IIFE para evitar conflictos"
+                    ]
+                },
                 {
                     "version": "0.2.0",
                     "changes": [
-                        "Nueva habilidad Construcci\\u00f3n: las unidades ganan XP al construir o reparar edificios. Hasta 5x de velocidad al nivel 100",
+                        "Nueva habilidad Construcci\u00f3n: las unidades ganan XP al construir o reparar edificios. Hasta 5x de velocidad al nivel 100",
                         "Sistema de 100 niveles por habilidad (antes eran solo 3 niveles fijos)",
                         "5 rangos con colores: Aprendiz (verde, nivel 10), Experto (azul, nivel 25), Maestro (morado, nivel 50), Legendario (naranja, nivel 75), Heroico (dorado, nivel 100)",
                         "Barra de progreso coloreada en el tooltip usando el color del rango",
-                        "Curva de progresi\\u00f3n exponencial: cada nivel requiere m\\u00e1s XP que el anterior (15\\u00d71.08^n)",
-                        "Bonificaciones din\\u00e1micas calculadas por nivel (sin archivos de aura est\\u00e1ticos)",
+                        "Curva de progresi\u00f3n exponencial: cada nivel requiere m\u00e1s XP que el anterior (15\u00d71.08^n)",
+                        "Bonificaciones din\u00e1micas calculadas por nivel (sin archivos de aura est\u00e1ticos)",
                         "Corregido el formato de colores en tooltips (hex convertido a colores nombrados)",
-                        "Corregida la precisi\\u00f3n decimal en la visualizaci\\u00f3n de XP",
-                        "Eliminados 39 archivos de aura JSON (c\\u00e1lculo din\\u00e1mico)",
+                        "Corregida la precisi\u00f3n decimal en la visualizaci\u00f3n de XP",
+                        "Eliminados 39 archivos de aura JSON (c\u00e1lculo din\u00e1mico)",
                         "Compatible con el mod personal_names (variables envueltas en IIFE)"
                     ]
                 },
                 {
                     "version": "0.1.0",
                     "changes": [
-                        "Lanzamiento inicial: 13 habilidades (8 civiles + 5 militares) con 100 niveles cada una",
-                        "5 rangos: Aprendiz, Experto, Maestro, Legendario, Heroico",
-                        "Barra de progreso visual en el tooltip del retrato",
-                        "Experiencia persistente al guardar la partida",
-                        "Bonificaciones aplicadas mediante ModifiersManager"
+                        "Lanzamiento inicial del mod"
                     ]
                 }
-            ],
-            "whatToExpectNote": "Compatible con el mod personal_names que asigna nombres propios a las unidades."
+            ]
         },
         {
             "id": "calendar_system",
