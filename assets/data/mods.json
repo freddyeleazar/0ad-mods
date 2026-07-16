@@ -34,6 +34,14 @@
             "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/daynight_cycle.zip",
             "changelog": [
                 {
+                    "version": "0.2.2",
+                    "changes": [
+                        "Ciclo recalibrado a 15 minutos reales: CYCLE_DURATION reducido de 1440 a 900 segundos para un ritmo de juego m\u00e1s \u00e1gil",
+                        "Arquitectura simplificada: CYCLE_DURATION ahora tiene \u00fanica fuente de verdad en el componente de simulaci\u00f3n DayNightCycle",
+                        "Nueva interfaz GuiInterface.GetCycleDuration() para que la GUI y otros mods consulten el valor sin hardcodearlo"
+                    ]
+                },
+                {
                     "version": "0.2.1",
                     "changes": [
                         "Compatible con Four Seasons: el tint de color se oculta autom\u00e1ticamente cuando Four Seasons est\u00e1 activo",
