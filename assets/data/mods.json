@@ -155,8 +155,8 @@
                 "Cada habilidad muestra: nombre con color de rango, nivel, barra de progreso coloreada y efecto.",
                 "Los datos de experiencia se guardan autom\u00e1ticamente con la partida."
             ],
-            "imageCard": "",
-            "imageLarge": "",
+            "imageCard": "assets/images/mod-covers/skills_mod-card.jpg",
+            "imageLarge": "assets/images/mod-covers/skills_mod-large.jpg",
             "dependsOn": null,
             "compatibilityNote": "Compatible con el mod personal_names. Los textos de rangos y habilidades usan el sistema de localizaci\u00f3n de 0 A.D.",
             "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/skills_mod.zip",
