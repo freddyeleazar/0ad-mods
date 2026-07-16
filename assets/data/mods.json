@@ -251,7 +251,7 @@
         {
             "id": "four_seasons",
             "name": "Four Seasons",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "summary": "A\u00f1ade lluvia, cerezos en flor, luci\u00e9rnagas y un overlay de color estacional que cambia seg\u00fan la hora del d\u00eda y la \u00e9poca del a\u00f1o. Llueve m\u00e1s en invierno, los cerezos florecen en primavera y las luci\u00e9rnagas aparecen en las noches de verano.",
             "tagline": "Clima que cambia con el calendario",
             "description": "<p>Four Seasons trae el clima a la vida en 0 A.D. El mod a\u00f1ade lluvia, cerezos en flor y luci\u00e9rnagas que aparecen dependiendo de la estaci\u00f3n, la hora del d\u00eda y el mes del calendario.</p><p>La lluvia es m\u00e1s frecuente en invierno y oto\u00f1o, y rara en verano. Los cerezos florecen durante los d\u00edas de primavera, y las luci\u00e9rnagas brillan en las noches de verano. Los sonidos ambientales tambi\u00e9n cambian: los p\u00e1jaros cantan en primavera y verano, el viento sopla en oto\u00f1o e invierno.</p><p>El mod funciona junto con Calendar System y Day/Night Cycle para mantener todo sincronizado.</p>",
@@ -287,6 +287,12 @@
             "compatibilityNote": null,
             "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/four_seasons.zip",
             "changelog": [
+                {
+                    "version": "1.1.3",
+                    "changes": [
+                        "Corregido error en multijugador: los efectos visuales ahora se ven en todos los jugadores (reemplazado AddLocalEntity por AddEntity)"
+                    ]
+                },
                 {
                     "version": "1.1.2",
                     "changes": [
