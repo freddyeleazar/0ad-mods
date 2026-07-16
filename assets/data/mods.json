@@ -421,6 +421,60 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "forest_regrowth",
+            "name": "Forest Regrowth",
+            "version": "0.1.0",
+            "summary": "Los \u00e1rboles, arbustos de bayas y \u00e1rboles frutales vuelven a crecer solos en el mismo lugar donde los talaste. Pasan por 3 etapas: reto\u00f1o, joven y adulto. 16 especies. Necesita Day/Night Cycle.",
+            "tagline": "El bosque nunca se acaba si sabes esperar",
+            "description": "<p>En el 0 A.D. original, cuando talas un \u00e1rbol o recoges bayas, desaparecen para siempre. Con Forest Regrowth, las plantas vuelven a crecer solas en el mismo sitio donde las cortaste.</p><p>Despu\u00e9s de talar un \u00e1rbol, espera 3 d\u00edas del juego y aparecer\u00e1 un reto\u00f1o. El reto\u00f1o tiene solo el 10% de la madera de un \u00e1rbol adulto. En 3 d\u00edas m\u00e1s se convierte en un \u00e1rbol joven (40% de madera). Y en 6 d\u00edas llega a adulto otra vez (100% de madera).</p><p>Lo mismo pasa con los arbustos de bayas y los manzanos. Las bayas tambi\u00e9n pasan por las 3 etapas. En total el mod da vida a 16 tipos de plantas diferentes.</p><p>El mod usa el reloj de Day/Night Cycle para medir los d\u00edas. Un d\u00eda completo son 15 minutos reales a velocidad 1x. As\u00ed que 3 d\u00edas son 45 minutos, y 6 d\u00edas son 1 hora y media.</p><p><strong>Especies con regeneraci\u00f3n:</strong> Pino, Roble, Gran Roble, Algarrobo, Haya Europea, \u00c1lamo, Matorral, Arbusto Templado, Arbusto de Estepa, Arbusto Oto\u00f1al, 5 tipos de arbustos de bayas y Manzano.</p>",
+            "features": [
+                "<strong>Los \u00e1rboles vuelven a crecer:</strong> Despu\u00e9s de talar un \u00e1rbol, aparece un reto\u00f1o en el mismo lugar tras 3 d\u00edas del juego. Pasa por 3 etapas hasta ser adulto otra vez.",
+                "<strong>3 etapas de crecimiento:</strong> Reto\u00f1o (10% del recurso), Joven (40%) y Adulto (100%). Cada etapa se ve diferente en la pantalla.",
+                "<strong>16 especies diferentes:</strong> 6 \u00e1rboles maderables, 4 arbustos de madera, 5 arbustos de bayas y 1 \u00e1rbol frutal (manzano).",
+                "<strong>Bayas y manzanas tambi\u00e9n crecen:</strong> Los arbustos de bayas y los manzanos tambi\u00e9n se regeneran solos despu\u00e9s de recogerlos.",
+                "<strong>Usa el reloj del juego:</strong> Los tiempos de crecimiento se basan en el ciclo d\u00eda/noche de Day/Night Cycle. 1 d\u00eda = 15 minutos reales.",
+                "<strong>Se guarda con la partida:</strong> Si guardas la partida y la cargas despu\u00e9s, los \u00e1rboles siguen creciendo donde los dejaste.",
+                "<strong>No necesitas hacer nada:</strong> El mod funciona solo. Solo tienes que jugar normalmente.",
+                "<strong>Traducido al espa\u00f1ol:</strong> Los nombres de las plantas (Reto\u00f1o de Pino, Pino Joven, etc.) aparecen en espa\u00f1ol si tu juego est\u00e1 en ese idioma."
+            ],
+            "whatToExpect": [
+                "Talar \u00e1rboles sin miedo a quedarte sin madera para siempre.",
+                "Ver c\u00f3mo los \u00e1rboles que cortaste vuelven a crecer poco a poco.",
+                "Recoger bayas y manzanas sabiendo que volver\u00e1n a salir.",
+                "Planificar tus talas sabiendo que los \u00e1rboles tardan 12 d\u00edas en volver a ser adultos.",
+                "Los \u00e1rboles j\u00f3venes dan menos madera. \u00a1Mejor esperar a que crezcan del todo!"
+            ],
+            "whatToExpectNote": "El mod no afecta a los minerales, piedras ni ruinas. Solo los \u00e1rboles y arbustos frutales se regeneran. Necesitas tener el mod Day/Night Cycle instalado y activado.",
+            "whereToFind": [
+                "Los \u00e1rboles se regeneran solos. No tienes que hacer nada especial.",
+                "<strong>Ver el crecimiento:</strong> Despu\u00e9s de talar un \u00e1rbol, vuelve despu\u00e9s de un rato y ver\u00e1s un reto\u00f1o peque\u00f1o en el mismo sitio.",
+                "<strong>Recursos:</strong> Al seleccionar un reto\u00f1o o \u00e1rbol joven, ver\u00e1s que tiene menos recursos que uno adulto.",
+                "<strong>Requiere Day/Night Cycle:</strong> El mod Forest Regrowth necesita el mod Day/Night Cycle para medir el tiempo."
+            ],
+            "imageCard": "",
+            "imageLarge": "",
+            "dependsOn": [
+                "daynight_cycle"
+            ],
+            "compatibilityNote": "Necesita Day/Night Cycle instalado y activado. Compatible con Calendar System y Four Seasons (aunque estos no son necesarios).",
+            "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/forest_regrowth.zip",
+            "changelog": [
+                {
+                    "version": "0.1.0",
+                    "changes": [
+                        "Lanzamiento inicial: 16 especies de plantas con 3 etapas de crecimiento",
+                        "\u00c1rboles incluidos: pino, roble, gran roble, algarrobo, haya europea, \u00e1lamo",
+                        "Arbustos de madera: matorral, arbusto templado, arbusto de estepa, arbusto oto\u00f1al",
+                        "Bayas y frutas: 5 tipos de arbustos de bayas y manzano",
+                        "Cada planta pasa por 3 etapas: reto\u00f1o (10% recurso), joven (40%), adulto (100%)",
+                        "Tiempos de crecimiento: reto\u00f1o tras 3 d\u00edas, joven tras 3 d\u00edas, adulto tras 6 d\u00edas",
+                        "Usa Day/Night Cycle como fuente de tiempo",
+                        "Traducciones en ingl\u00e9s (en) y espa\u00f1ol (es)"
+                    ]
+                }
+            ]
         }
     ]
 }
