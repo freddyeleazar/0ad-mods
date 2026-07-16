@@ -536,6 +536,12 @@ footer strong {
   animation: fadeIn 0.5s ease-out;
 }
 
+.changelog-list {
+  max-height: 300px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+}
+
 /* ============================================
    Accesibilidad
    ============================================ */
