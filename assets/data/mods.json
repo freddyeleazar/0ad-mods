@@ -74,7 +74,7 @@
         {
             "id": "personal_names",
             "name": "Personal Names",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "summary": "900 nombres hist\u00f3ricos \u00fanicos para unidades seg\u00fan civilizaci\u00f3n (60 por civ). Se muestra en panel, tooltip y grupos.",
             "tagline": "Cada soldado tiene una historia, cada nombre cuenta",
             "description": "<p>Personal Names le asigna a cada unidad un nombre \u00fanico basado en su civilizaci\u00f3n y g\u00e9nero. Cuando entrenas una unidad, el mod elige un nombre de una lista de 60 por civilizaci\u00f3n (30 masculinos + 30 femeninos) sin repetirlo hasta agotar la lista. Luego empieza de nuevo, as\u00ed siempre hay nombre disponible.</p><p><strong>Civilizaciones soportadas:</strong> Atenas, Britanos, Cartago, Esparta, Galos, Germanos, Han (China), Iberos, Kush, Macedonios, Mauryas, Persas, Ptolemaicos, Romanos y Sel\u00e9ucidas.</p><p><strong>C\u00f3mo se ve:</strong> El nombre aparece en lugar del t\u00edtulo espec\u00edfico en el panel de selecci\u00f3n. Tambi\u00e9n se muestra al pasar el cursor sobre el retrato como &quot;Nombre (Tipo de Unidad)&quot;.</p>",
@@ -106,6 +106,13 @@
             "compatibilityNote": null,
             "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/personal_names.zip",
             "changelog": [
+                {
+                    "version": "0.2.1",
+                    "changes": [
+                        "Corregido crash con 'class constructors must be invoked with new' al tener muchas unidades en el panel de grupos",
+                        "Eliminado el override de PanelEntity.js por incompatibilidad con clases ES6 del motor"
+                    ]
+                },
                 {
                     "version": "0.2.0",
                     "changes": [
