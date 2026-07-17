@@ -439,7 +439,7 @@
         {
             "id": "forest_regrowth",
             "name": "Forest Regrowth",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "summary": "Los \u00e1rboles, arbustos de bayas y \u00e1rboles frutales vuelven a crecer solos en el mismo lugar donde los talaste. Pasan por 3 etapas: reto\u00f1o, joven y adulto. 16 especies. Necesita Day/Night Cycle.",
             "tagline": "El bosque nunca se acaba si sabes esperar",
             "description": "<p>En el 0 A.D. original, cuando talas un \u00e1rbol o recoges bayas, desaparecen para siempre. Con Forest Regrowth, las plantas vuelven a crecer solas en el mismo sitio donde las cortaste.</p><p>Despu\u00e9s de talar un \u00e1rbol, espera 3 d\u00edas del juego y aparecer\u00e1 un reto\u00f1o. El reto\u00f1o tiene solo el 10% de la madera de un \u00e1rbol adulto. En 3 d\u00edas m\u00e1s se convierte en un \u00e1rbol joven (40% de madera). Y en 6 d\u00edas llega a adulto otra vez (100% de madera).</p><p>Lo mismo pasa con los arbustos de bayas y los manzanos. Las bayas tambi\u00e9n pasan por las 3 etapas. En total el mod da vida a 16 tipos de plantas diferentes.</p><p>El mod usa el reloj de Day/Night Cycle para medir los d\u00edas. Un d\u00eda completo son 15 minutos reales a velocidad 1x. As\u00ed que 3 d\u00edas son 45 minutos, y 6 d\u00edas son 1 hora y media.</p><p><strong>Especies con regeneraci\u00f3n:</strong> Pino, Roble, Gran Roble, Algarrobo, Haya Europea, \u00c1lamo, Matorral, Arbusto Templado, Arbusto de Estepa, Arbusto Oto\u00f1al, 5 tipos de arbustos de bayas y Manzano.</p>",
@@ -475,6 +475,16 @@
             "compatibilityNote": "Necesita Day/Night Cycle instalado y activado. Compatible con Calendar System y Four Seasons (aunque estos no son necesarios).",
             "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/forest_regrowth.zip",
             "changelog": [
+                {
+                    "version": "0.4.0",
+                    "changes": [
+                        "Nuevas mallas COLLADA escaladas: los reto\u00f1os ahora se ven un 30% del tama\u00f1o adulto, y los j\u00f3venes un 60%",
+                        "Se descargaron y escalaron 30 mallas fuente del repositorio oficial de 0 A.D.",
+                        "Pinos, \u00e1lamos, arbustos de madera y arbustos de bayas ahora tienen modelos m\u00e1s peque\u00f1os en etapas tempranas",
+                        "Corregidos nombres de malla incorrectos en 12 actores XML (ahora usan los nombres reales del juego base)",
+                        "Robles, robles grandes, algarrobos, hayas y manzanos ya ten\u00edan diferenciaci\u00f3n visual (tronco sin copa) - no requirieron escalado"
+                    ]
+                },
                 {
                     "version": "0.3.0",
                     "changes": [
