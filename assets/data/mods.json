@@ -369,12 +369,12 @@
         {
             "id": "ecosystem_mod",
             "name": "Dynamic Ecosystem",
-            "version": "0.2.0",
-            "summary": "Los animales se reproducen, crecen en tres etapas (beb\u00e9, joven, adulto) y migran para reponer las zonas cazadas. En el juego original los animales no se reponen nunca. Este mod a\u00f1ade un ecosistema vivo. 6 especies incluidas.",
+            "version": "0.3.0",
+            "summary": "Los animales se reproducen, crecen en tres etapas (beb\u00e9, joven, adulto) y migran para reponer las zonas cazadas. En el juego original los animales no se reponen nunca. Este mod a\u00f1ade un ecosistema vivo. 12 especies incluidas: ciervos, jabal\u00edes, ovejas, cabras, vacas, cerdos, gallinas, conejos, \u00f1us, sanga, ceb\u00fa y toros.",
             "tagline": "Cada vida cuenta, cada cacer\u00eda tiene consecuencias",
             "description": "<p>En el 0 A.D. original, los animales que cazas no se reponen nunca. Una vez que eliminas una manada, desaparece para siempre. Dynamic Ecosystem soluciona esto a\u00f1adiendo un ecosistema vivo con reproducci\u00f3n, crecimiento y migraci\u00f3n.</p><p>Los animales tienen ciclos de vida reales: nacen como cr\u00edas, crecen hasta adultos y pueden migrar cuando su poblaci\u00f3n se ve amenazada. Si cazas demasiado, te quedar\u00e1s sin animales por un buen tiempo.</p><p>Cada manada tiene un tama\u00f1o m\u00e1ximo basado en su poblaci\u00f3n inicial. Cuando una manada pierde animales, la migraci\u00f3n trae nuevos ejemplares para reponerla, siempre que no superen el l\u00edmite natural.</p><p>Los beb\u00e9s y j\u00f3venes tienen menor tama\u00f1o visual, menos carne y menos puntos de vida. Las animaciones tambi\u00e9n escalan proporcionalmente.</p>",
             "features": [
-                "<strong>6 especies con ciclo de vida:</strong> Ciervos, jabal\u00edes, ovejas, cabras, vacas y cerdos nacen como cr\u00edas, crecen a j\u00f3venes y luego a adultos.",
+                "<strong>12 especies con ciclo de vida:</strong> Ciervos, jabal\u00edes, ovejas, cabras, vacas, cerdos, gallinas, conejos, \u00f1us, ganado sanga, ceb\u00fa y toros nacen como cr\u00edas, crecen a j\u00f3venes y luego a adultos.",
                 "<strong>Reproducci\u00f3n autom\u00e1tica:</strong> Cada 24 horas del juego, los animales cercanos de la misma especie pueden tener cr\u00edas.",
                 "<strong>Migraci\u00f3n inteligente:</strong> Si una manada baja del 50% de su poblaci\u00f3n inicial, llegan 2 animales adultos para unirse a la manada y reponer la poblaci\u00f3n.",
                 "<strong>L\u00edmite natural:</strong> Cada manada no puede superar el 110% de su poblaci\u00f3n inicial. La reproducci\u00f3n se detiene al alcanzar el l\u00edmite.",
@@ -400,6 +400,15 @@
             "compatibilityNote": null,
             "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/ecosystem_mod.zip",
             "changelog": [
+                {
+                    "version": "0.3.0",
+                    "changes": [
+                        "6 nuevas especies: gallinas, conejos, \u00f1us, ganado sanga, ceb\u00fa y toros (ahora 12 especies en total)",
+                        "Cada nueva especie con 3 etapas de crecimiento y escalado visual completo (mallas + animaciones)",
+                        "Herramienta tools/gitea_download.py para descargar assets del repositorio Gitea",
+                        "Scripts de escalado persistidos en tools/scale_collada.py y tools/scale_psa.py"
+                    ]
+                },
                 {
                     "version": "0.2.0",
                     "changes": [
