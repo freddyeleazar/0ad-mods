@@ -303,7 +303,7 @@
         {
             "id": "four_seasons",
             "name": "Four Seasons",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "summary": "A\u00f1ade lluvia, cerezos en flor, luci\u00e9rnagas y un overlay de color estacional que cambia seg\u00fan la hora del d\u00eda y la \u00e9poca del a\u00f1o. Llueve m\u00e1s en invierno, los cerezos florecen en primavera y las luci\u00e9rnagas aparecen en las noches de verano.",
             "tagline": "Clima que cambia con el calendario",
             "description": "<p>Four Seasons trae el clima a la vida en 0 A.D. El mod a\u00f1ade lluvia, cerezos en flor y luci\u00e9rnagas que aparecen dependiendo de la estaci\u00f3n, la hora del d\u00eda y el mes del calendario.</p><p>La lluvia es m\u00e1s frecuente en invierno y oto\u00f1o, y rara en verano. Los cerezos florecen durante los d\u00edas de primavera, y las luci\u00e9rnagas brillan en las noches de verano. Los sonidos ambientales tambi\u00e9n cambian: los p\u00e1jaros cantan en primavera y verano, el viento sopla en oto\u00f1o e invierno.</p><p>El mod funciona junto con Calendar System y Day/Night Cycle para mantener todo sincronizado.</p>",
@@ -339,6 +339,14 @@
             "compatibilityNote": null,
             "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/four_seasons.zip",
             "changelog": [
+                {
+                    "version": "1.1.5",
+                    "changes": [
+                        "Optimizaci\u00f3n de temporizadores: el intervalo de actualizaci\u00f3n del clima ahora escala proporcionalmente al ciclo d\u00eda/noche",
+                        "Reducida la frecuencia del overlay de color estacional de 200ms a 500ms (2fps es suficiente para un tint de pantalla)",
+                        "Unificadas las 3 cadenas setTimeout independientes en una sola a 500ms (sonido + debug hotkey)"
+                    ]
+                },
                 {
                     "version": "1.1.4",
                     "changes": [
@@ -478,7 +486,7 @@
         {
             "id": "forest_regrowth",
             "name": "Forest Regrowth",
-            "version": "0.4.4",
+            "version": "0.4.5",
             "summary": "Los \u00e1rboles, arbustos de bayas y \u00e1rboles frutales vuelven a crecer solos en el mismo lugar donde los talaste. Pasan por 3 etapas: reto\u00f1o, joven y adulto. 16 especies. Necesita Day/Night Cycle.",
             "tagline": "El bosque nunca se acaba si sabes esperar",
             "description": "<p>En el 0 A.D. original, cuando talas un \u00e1rbol o recoges bayas, desaparecen para siempre. Con Forest Regrowth, las plantas vuelven a crecer solas en el mismo sitio donde las cortaste.</p><p>Despu\u00e9s de talar un \u00e1rbol, espera 3 d\u00edas del juego y aparecer\u00e1 un reto\u00f1o. El reto\u00f1o tiene solo el 10% de la madera de un \u00e1rbol adulto. En 3 d\u00edas m\u00e1s se convierte en un \u00e1rbol joven (40% de madera). Y en 6 d\u00edas llega a adulto otra vez (100% de madera).</p><p>Lo mismo pasa con los arbustos de bayas y los manzanos. Las bayas tambi\u00e9n pasan por las 3 etapas. En total el mod da vida a 16 tipos de plantas diferentes.</p><p>El mod usa el reloj de Day/Night Cycle para medir los d\u00edas. Un d\u00eda completo son 15 minutos reales a velocidad 1x. As\u00ed que 3 d\u00edas son 45 minutos, y 6 d\u00edas son 1 hora y media.</p><p><strong>Especies con regeneraci\u00f3n:</strong> Pino, Roble, Gran Roble, Algarrobo, Haya Europea, \u00c1lamo, Matorral, Arbusto Templado, Arbusto de Estepa, Arbusto Oto\u00f1al, 5 tipos de arbustos de bayas y Manzano.</p>",
@@ -514,6 +522,14 @@
             "compatibilityNote": "Necesita Day/Night Cycle instalado y activado. Compatible con Calendar System y Four Seasons (aunque estos no son necesarios).",
             "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/forest_regrowth.zip",
             "changelog": [
+                {
+                    "version": "0.4.5",
+                    "changes": [
+                        "Optimizaci\u00f3n de temporizadores: unificados CheckRegrowth y CheckGrowth en un solo timer CheckAll",
+                        "El intervalo de verificaci\u00f3n ahora escala proporcionalmente al ciclo d\u00eda/noche (~100 chequeos por d\u00eda en vez de un valor fijo)",
+                        "Reducida la frecuencia de chequeo: de 2 timers/5s a 1 timer proporcional al ciclo (aprox. 10s para ciclo de 480s)"
+                    ]
+                },
                 {
                     "version": "0.4.4",
                     "changes": [
