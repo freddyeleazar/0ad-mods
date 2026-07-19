@@ -138,7 +138,7 @@
         {
             "id": "skills_mod",
             "name": "Experience Skills",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "summary": "13 habilidades con 100 niveles, 5 rangos con colores (Aprendiz, Experto, Maestro, Legendario, Heroico), barra de progreso coloreada en el tooltip del retrato. Incluye construcci\u00f3n y reparaci\u00f3n.",
             "tagline": "Cada unidad cuenta su propia historia de batallas",
             "description": "<p>Experience Skills da experiencia a las unidades seg\u00fan lo que hacen. A diferencia del sistema de rangos nativo de 0 A.D., este mod muestra una barra de progreso coloreada en el tooltip del retrato de la unidad.</p><p><strong>\u00bfC\u00f3mo funciona?</strong> Las unidades ganan XP al realizar acciones (recolectar, construir, atacar, recibir da\u00f1o). Al acumular suficiente XP, la unidad sube de nivel. Cada nivel da una bonificaci\u00f3n a la habilidad correspondiente.</p><p><strong>13 habilidades:</strong> 8 civiles (Recolector, Cazador, Agricultor, Pescador, Le\u00f1ador, Cantero, Minero, Construcci\u00f3n) + 5 militares (Combate Cuerpo a Cuerpo, Combate a Distancia, Resistencia a Corte, Resistencia a Perforaci\u00f3n, Salud). Cada habilidad sube hasta el nivel 100.</p><p><strong>Construcci\u00f3n:</strong> Las unidades constructoras ganan XP cada segundo mientras construyen o reparan. Cuanto m\u00e1s practican, m\u00e1s r\u00e1pido construyen. Al nivel 100 construyen 5 veces m\u00e1s r\u00e1pido.</p><p><strong>5 rangos con colores:</strong> Aprendiz (nivel 10, verde), Experto (nivel 25, azul), Maestro (nivel 50, p\u00farpura), Legendario (nivel 75, naranja), Heroico (nivel 100, dorado). El color se aplica al nombre de la habilidad y a la barra de progreso.</p><p><strong>Progresi\u00f3n:</strong> Cada nivel requiere m\u00e1s experiencia que el anterior (curva exponencial 15 \u00d7 1.08^n). Los primeros niveles son r\u00e1pidos, pero llegar a los rangos altos requiere muchas horas de juego.</p><p><strong>Bonificaciones:</strong> Ataque cuerpo a cuerpo y a distancia +4% por nivel (hasta 5x al 100). Resistencia +0.35 por nivel (hasta +35). Salud +4 HP por nivel (hasta +400). Recolecci\u00f3n +2% por nivel (hasta 3x). Construcci\u00f3n +4% por nivel (hasta 5x).</p>",
@@ -174,6 +174,15 @@
             "compatibilityNote": "Compatible con el mod personal_names. Los textos de rangos y habilidades usan el sistema de localizaci\u00f3n de 0 A.D.",
             "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/skills_mod.zip",
             "changelog": [
+                {
+                    "version": "0.2.1",
+                    "changes": [
+                        "Optimizaci\u00f3n algor\u00edtmica: b\u00fasqueda de habilidades O(13) reduce a O(1) mediante mapas inversos precalculados en loadDefs()",
+                        "Tabla de niveles precalculada (xpThresholds[]): totalXpForLevel pasa de O(n) a O(1), elimina el cuello de botella O(L\u00b2) en subidas de nivel masivas",
+                        "Fusionados dos bucles sobre this.carrying en CommitResources en uno solo",
+                        "Eliminadas llamadas redundantes a Object.keys() en GuiInterface y selection_details"
+                    ]
+                },
                 {
                     "version": "0.2.0",
                     "changes": [
