@@ -3,7 +3,7 @@
         {
             "id": "daynight_cycle",
             "name": "Day/Night Cycle",
-            "version": "0.2.3",
+            "version": "0.2.4",
             "summary": "A\u00f1ade un reloj con la hora virtual (HH:MM) y un tinte de color suave sobre la escena 3D que cambia seg\u00fan la hora del d\u00eda. Sin cubrir la interfaz. Ciclo de 8 minutos. Se activa con Alt+N. Compatible con Four Seasons.",
             "tagline": "Un tiempo que pasa, un mundo que vive",
             "description": "<p>Day/Night Cycle a\u00f1ade dos cosas al HUD de 0 A.D.:</p><p><strong>Reloj digital:</strong> Muestra la hora del juego en formato HH:MM (ej: &quot;08:08 h&quot;). Un ciclo completo dura 480 segundos de juego a velocidad 1x, que son 24 horas virtuales (8 minutos reales). El d\u00eda comienza a las 8:00 de la ma\u00f1ana. El texto del sufijo (&quot;h&quot; en ingl\u00e9s, &quot;hrs&quot; en espa\u00f1ol) se adapta al idioma del juego.</p><p><strong>Tinte de color sobre el mundo 3D:</strong> Cubre solo el terreno, edificios y unidades con un color que cambia suavemente seg\u00fan la hora virtual. No tapa los paneles laterales, el chat, el minimapa ni los botones. El color cambia entre 10 puntos clave usando interpolaci\u00f3n suave (lineal y cuadr\u00e1tica). De noche se ve azul oscuro, al amanecer marr\u00f3n c\u00e1lido, de d\u00eda casi transparente y al atardecer naranja.</p><p>El reloj y el tinte se pueden mostrar u ocultar juntos con la tecla Alt+N.</p><p><strong>Compatible con Four Seasons:</strong> Si el mod Four Seasons est\u00e1 activo, el tinte de color se oculta autom\u00e1ticamente para que Four Seasons controle los colores de la pantalla. El reloj digital sigue funcionando siempre.</p>",
@@ -33,6 +33,12 @@
             "compatibilityNote": null,
             "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/daynight_cycle.zip",
             "changelog": [
+                {
+                    "version": "0.2.4",
+                    "changes": [
+                        "Optimizaci\u00f3n de cach\u00e9: Engine.ConfigDB_GetValue para fourseasons ahora se lee una sola vez en vez de cada frame"
+                    ]
+                },
                 {
                     "version": "0.2.3",
                     "changes": [
@@ -74,7 +80,7 @@
         {
             "id": "personal_names",
             "name": "Personal Names",
-            "version": "0.2.1",
+            "version": "0.2.2",
             "summary": "900 nombres hist\u00f3ricos \u00fanicos para unidades seg\u00fan civilizaci\u00f3n (60 por civ). Se muestra en panel, tooltip y grupos.",
             "tagline": "Cada soldado tiene una historia, cada nombre cuenta",
             "description": "<p>Personal Names le asigna a cada unidad un nombre \u00fanico basado en su civilizaci\u00f3n y g\u00e9nero. Cuando entrenas una unidad, el mod elige un nombre de una lista de 60 por civilizaci\u00f3n (30 masculinos + 30 femeninos) sin repetirlo hasta agotar la lista. Luego empieza de nuevo, as\u00ed siempre hay nombre disponible.</p><p><strong>Civilizaciones soportadas:</strong> Atenas, Britanos, Cartago, Esparta, Galos, Germanos, Han (China), Iberos, Kush, Macedonios, Mauryas, Persas, Ptolemaicos, Romanos y Sel\u00e9ucidas.</p><p><strong>C\u00f3mo se ve:</strong> El nombre aparece en lugar del t\u00edtulo espec\u00edfico en el panel de selecci\u00f3n. Tambi\u00e9n se muestra al pasar el cursor sobre el retrato como &quot;Nombre (Tipo de Unidad)&quot;.</p>",
@@ -106,6 +112,12 @@
             "compatibilityNote": null,
             "downloadUrl": "https://github.com/freddyeleazar/0ad-mods/raw/main/assets/downloads/personal_names.zip",
             "changelog": [
+                {
+                    "version": "0.2.2",
+                    "changes": [
+                        "Optimizaci\u00f3n: Engine.QueryInterface(IID_Identity) ahora solo se consulta si ret.identity.name no fue poblado por la serializaci\u00f3n original"
+                    ]
+                },
                 {
                     "version": "0.2.1",
                     "changes": [
